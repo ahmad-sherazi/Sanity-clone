@@ -11,7 +11,7 @@ export default function Navbar() {
     { name: "PLATFORM", href: "/platform" },
     { name: "APPROACH", href: "/approach" },
     { name: "VISION", href: "/vision" },
-    { name: "CAREERS", href: "/careers" },
+    // { name: "CAREERS", href: "/careers" },
     { name: "BLOG", href: "/blog" },
     { name: "NEWSROOM", href: "/newsroom" },
   ];
@@ -59,7 +59,7 @@ export default function Navbar() {
                 href={link.href}
                 onClick={() => setMenuOpen(false)}
                 className={`hover:text-white transition-colors ${
-                  link.name === "PLATFORM" ? "text-cyan-300" : "text-gray-300"
+                  link.name === "PLATFORM" ? "text-cyan-100" : "text-gray-300"
                 }`}
               >
                 {link.name}
