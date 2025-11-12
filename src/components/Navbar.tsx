@@ -59,7 +59,7 @@ export default function Navbar() {
                 href={link.href}
                 onClick={() => setMenuOpen(false)}
                 className={`hover:text-white transition-colors ${
-                  link.name === "PLATFORM" ? "text-cyan-100" : "text-gray-300"
+                  link.name === "PLATFORM" ? "text-gray-300" : "text-gray-300"
                 }`}
               >
                 {link.name}
