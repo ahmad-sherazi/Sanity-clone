@@ -22,7 +22,7 @@ export default function Navbar() {
       <aside className="hidden md:flex w-32 h-screen fixed left-0 top-0 flex-col items-start justify-start mt-12 gap-3 pl-8 ml-8 text-white text-sm font-mono tracking-wider bg-[#151617]">
         {/* Logo */}
         <div className="flex items-center gap-2  hover:bg-cyan-100 ">
-         <Link href="/"><span className="text-cyan-100 hover:text-black  font-semibold">POOLSIDE</span></Link>
+         <Link href="/"><span className="text-cyan-100 hover:text-black  font-semibold">SANITY</span></Link>
         </div>
 
         {/* Links */}
