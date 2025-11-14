@@ -1303,7 +1303,7 @@ export default function Home() {
 
         {/* ---------- MOBILE NAVBAR ---------- */}
         <div className="md:hidden fixed top-0 left-0 w-full bg-black flex justify-between items-center px-6 py-4 z-50 text-white font-mono tracking-wider border-b border-gray-900">
-          <span className="text-cyan-100 font-semibold">POOLSIDE</span>
+          <span className="text-cyan-100 font-semibold">SANITY</span>
           <button
             onClick={() => setMenuOpen(!menuOpen)}
             className="text-gray-300"
