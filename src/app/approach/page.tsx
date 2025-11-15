@@ -8,12 +8,13 @@ import { motion } from "framer-motion";
 
 export default function ApproachPage() {
   return (
-    <div className="bg-[#151617] text-white min-h-screen">
+    <div className="bg-[#151617]  min-h-screen">
       {/* ✅ Navbar */}
       <Navbar />
 
       {/* ✅ Approach Section */}
-      <section className="bg-[#151617] text-white py-16 px-8 ml-26">
+     <section className="bg-[#151617] text-white py-0 md:mt-0 md:-pt-32 pt-20 md:py-16 px-4 md:px-8 ml-0 md:ml-26">
+
         {/* Top Text */}
         {/* <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-12 mb-12">
           <div>
@@ -35,10 +36,10 @@ export default function ApproachPage() {
         </div> */}
 {/* Diagram Heading & Description */}
 <div className="max-w-4xl mx-auto text-left mb-8">
-  <h3 className="text-5xl font-normal text-white mb-2 mt-16"> Outcomes, not tokens.
+  <h3 className="md:text-5xl text-3xl font-normal text-white mb-2 mt-0 md:mt-16"> Outcomes, not tokens.
               <br />
               Inside your boundary.</h3>
-     <p className="text-[#BBBBBB] leading-relaxed mt-20 text-2xl">
+     <p className="text-[#BBBBBB] leading-relaxed mt-0 md:mt-20 md:text-2xl text-md">
               <span className="font-semibold  text-white">
                 Forward Deployed Research Engineers
               </span>{" "}
@@ -48,7 +49,7 @@ export default function ApproachPage() {
 </div>
 
 {/* Diagram Box */}
-<div className="max-w-4xl mx-auto border border-white p-6 mb-12 flex items-center justify-center">
+<div className="max-w-4xl mx-auto border border-white p-0 md:p-6 mb-0 md:mb-12 flex items-center justify-center">
 
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -88,7 +89,7 @@ export default function ApproachPage() {
         </div>
 
         {/* Bottom Text Columns */}
-        <div className="max-w-4xl mx-auto grid md:grid-cols-4 gap-10 text-md text-[#AAAAAA]">
+        <div className="max-w-4xl mx-auto grid md:grid-cols-4 gap-10 text-md md:mt-0 mt-4 text-[#AAAAAA]">
           <div>
             <h3 className="font-semibold text-gray-100 mb-2">Outcome ownership</h3>
             <p>
@@ -140,7 +141,7 @@ export default function ApproachPage() {
 
 
 {/* ✅ Animated Underline Row (visible & positioned) */}
-<div className="flex justify-between gap-10 mt-12 md:ml-28 px-[10vw] max-w-[1500px] mx-auto relative z-20">
+<div className="flex justify-between gap-10 mt-6 md:mt-12 ml-0 md:ml-28 px-4 md:px-[10vw] max-w-[1500px] mx-auto relative z-20">
   {/* Left underline */}
   <motion.div
     className="relative w-full h-[2px] bg-[#1a1b1c] overflow-hidden"
@@ -185,7 +186,7 @@ export default function ApproachPage() {
 
 
 {/* ✅ Speak to Us + Form + FAQs Section (aligned with circle section width) */}
-<section className="px-[10vw] md:ml-28 py-20  text-white bg-[#151617] grid md:grid-cols-2 gap-20 max-w-[1500px] mx-auto">
+<section className="px-4 md:px-[10vw] ml-0 md:ml-28 py-0 md:py-20 md:mt-0 mt-20 text-white bg-[#151617] grid md:grid-cols-2 gap-20 max-w-[1500px] mx-auto">
   {/* LEFT SIDE — Text */}
   <div className="flex flex-col justify-start gap-6">
     <div>
@@ -257,7 +258,7 @@ export default function ApproachPage() {
 
 
   {/* ✅ Footer */}
-        <div className="flex justify-center items-center min-h-[40vh] ml-12 bg-[#151617]">
+        <div className="flex justify-center items-center min-h-[40vh] ml-0 md:ml-12 bg-[#151617]">
           <h1
             className="text-[100px] md:text-[160px] font-extrabold text-transparent uppercase tracking-wide"
             style={{

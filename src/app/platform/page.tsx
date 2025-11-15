@@ -298,28 +298,34 @@ export default function PlatformPage() {
       <main className="md:ml-14 w-full overflow-y-auto  md:pt-0">
 
         {/* ✅ Overlapping Circles Section */}
-        <section className="min-h-screen flex items-center justify-center relative ml-16  ">
-          <div className="relative flex -space-x-10">
+        <section className="min-h-screen flex items-center justify-center relative ml-0 md:ml-16 px-4 md:px-0 md:mt-0 -mt-24 overflow-hidden">
+
+
+          <div className="relative flex -space-x-9 md:-space-x-10 overflow-hidden">
+
             {/* Circle 1 */}
-            <div className="w-80 h-80 border-2 border-dashed border-[#444444] rounded-full flex items-center justify-center bg-[#151617]">
-              <h2 className="text-3xl tracking-wide">
-                Your <span className="text-white">code.</span>
-              </h2>
-            </div>
+            <div className="w-44 h-44 md:w-80 md:h-80 border-2 border-dashed border-[#444444] rounded-full flex items-center justify-center bg-[#151617]">
+  <h2 className="text-xl md:text-3xl tracking-wide">
+    Your <span className="text-white">code.</span>
+  </h2>
+</div>
+
 
             {/* Circle 2 */}
-            <div className="w-80 h-80 border-2 border-dashed border-[#444444] rounded-full flex items-center justify-center bg-[#151617]">
-              <h2 className="text-3xl tracking-wide">
-                Your <span className="text-white">data.</span>
-              </h2>
-            </div>
+          <div className="w-44 h-44 md:w-80 md:h-80 border-2 border-dashed border-[#444444] rounded-full flex items-center justify-center bg-[#151617]">
+  <h2 className="text-xl md:text-3xl tracking-wide">
+    Your <span className="text-white">data.</span>
+  </h2>
+</div>
+
 
             {/* Circle 3 */}
-            <div className="w-80 h-80 border-2 border-dashed border-[#444444] rounded-full flex items-center justify-center bg-[#151617]">
-              <h2 className="text-3xl tracking-wide">
-                Your <span className="text-white">model.</span>
-              </h2>
-            </div>
+           <div className="w-44 h-44 md:w-80 md:h-80 border-2 border-dashed border-[#444444] rounded-full flex items-center justify-center bg-[#151617]">
+  <h2 className="text-xl md:text-3xl tracking-wide">
+    Your <span className="text-white">future.</span>
+  </h2>
+</div>
+
 
             {/* ✅ Intersection Glow */}
             {/* <div className="absolute left-[17rem] top-10 w-64 h-64 bg-[#151617] blur-2xl rounded-full pointer-events-none"></div> */}
@@ -342,7 +348,7 @@ export default function PlatformPage() {
 
 
 {/* ✅ Futureproofed Section (perfectly aligned + dual underline row + logos under col2) */}
-<section className="px-[10vw] md:ml-14 flex flex-col gap-12 max-w-[1500px] mt-8 mx-auto bg-[#151617]">
+<section className="px-4 md:px-[10vw] ml-0 md:ml-14 flex flex-col  md:mt-8 gap-12 max-w-[1500px] -mt-28  mx-auto bg-[#151617]">
 
   {/* Text + Content Side by Side */}
   <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
@@ -424,7 +430,7 @@ export default function PlatformPage() {
 
 
 {/* ✅ Models Powering Section (same width as circle section) */}
-<section className="grid md:grid-cols-2 gap-12 px-[10vw] md:ml-14 py-24 bg-[#151617] max-w-[1500px] mx-auto mt-28">
+<section className="grid md:grid-cols-2 gap-12 px-4 md:px-[10vw] ml-0 md:ml-14 py-24 bg-[#151617] max-w-[1500px] mx-auto -mt-0 md:mt-28">
   {/* Left Content */}
   <div className="flex flex-col gap-8">
     <h1 className="text-5xl font-normal leading-snug">
@@ -463,6 +469,7 @@ export default function PlatformPage() {
 
   {/* Right Empty Column (keeps width balance with left side) */}
   <div className="hidden md:block bg-[#151617]"></div>
+  
 </section>
 
 
@@ -471,7 +478,8 @@ export default function PlatformPage() {
 
 
   {/* ✅ Underlines in one row with gap from center */}
-  <div className="flex justify-between gap-10  md:ml-14 px-[10vw] max-w-[1500px] mx-auto mt-28">
+ <div className="flex justify-between gap-10 md:mt-12 -mt-4 ml-0 md:ml-14 px-4 md:px-[10vw] max-w-[1500px] mx-auto relative z-20">
+
     {/* Left underline (Column 1) */}
     <motion.div
       className="relative w-full h-[1px] bg-black overflow-hidden"
@@ -518,7 +526,7 @@ export default function PlatformPage() {
 
 
 {/* ✅ Speak to Us + Form + FAQs Section (aligned with circle section width) */}
-<section className="px-[10vw] md:ml-14 py-20  text-white bg-[#151617] grid md:grid-cols-2 gap-20 max-w-[1500px] mx-auto">
+<section className="px-4 md:px-[10vw] ml-0 md:ml-14 py-20  text-white bg-[#151617] grid md:grid-cols-2 gap-20 max-w-[1500px] mx-auto">
   {/* LEFT SIDE — Text */}
   <div className="flex flex-col justify-start gap-6">
     <div>
@@ -592,7 +600,7 @@ export default function PlatformPage() {
 
 
 {/* ✅ Animated Underline Row (visible & positioned) */}
-<div className="flex justify-between gap-10 mt-12 md:ml-14 px-[10vw] max-w-[1500px] mx-auto relative z-20">
+<div className="flex justify-between gap-10 -mt-4 md:mt-12 md:ml-14 px-[10vw] max-w-[1500px] mx-auto relative z-20">
   {/* Left underline */}
   <motion.div
     className="relative w-full h-[2px] bg-[#1a1b1c] overflow-hidden"
@@ -659,7 +667,7 @@ export default function PlatformPage() {
 
 
     {/* FAQs */}
-    <div className="flex flex-col gap-6 mt-24">
+    <div className="flex flex-col gap-6 mt-16 md:mt-24">
       <h4 className="text-2xl font-semibold">FAQs</h4>
 
       <details open className="border-t border-[#BBBBBB] pt-4">
