@@ -134,9 +134,9 @@ export default function NewsroomPage() {
         </section>
 
         {/* ✅ Footer */}
-        <div className="flex justify-center items-center min-h-[40vh] lg:ml-12 max-lg:ml-0 mt-12 bg-[#151617] w-full">
+        <div className="flex justify-center items-center min-h-[40vh] lg:ml-0 max-lg:ml-0 mt-12 bg-[#151617] w-full">
           <h1
-            className="text-[60px] sm:text-[100px] md:text-[140px] lg:text-[160px] font-extrabold text-transparent uppercase tracking-wide"
+            className="text-[100px] sm:text-[100px] md:text-[140px] lg:text-[160px]  font-extrabold text-transparent uppercase tracking-wide"
             style={{
               backgroundImage:
                 "repeating-linear-gradient(0deg, #ccc 0, #ccc 2px, transparent 2px, transparent 8px)",

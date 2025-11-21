@@ -1711,7 +1711,7 @@ export default function Home() {
       {/* ✅ Footer */}
       <div className="flex justify-center items-center min-h-[30vh] md:min-h-[40vh] bg-[#151617] text-center">
         <h1
-          className="text-[70px] sm:text-[100px] md:text-[160px] font-extrabold text-transparent uppercase tracking-wide"
+          className="text-[100px] sm:text-[100px] md:text-[160px] font-extrabold md:ml-20 ml-0 text-transparent uppercase tracking-wide"
           style={{
             backgroundImage:
               "repeating-linear-gradient(0deg, #ccc 0, #ccc 2px, transparent 2px, transparent 8px)",

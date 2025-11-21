@@ -543,7 +543,7 @@ export default function VisionPage() {
           <footer className="w-full flex justify-center items-center min-h-[40vh] bg-[#151617] mt-8 md:-mb-8">
             {/* ⭐ MOBILE FONT SIZE FIX */}
             <h1
-              className="text-[50px] sm:text-[100px] md:text-[140px] lg:text-[160px] lg:mr-28 font-extrabold text-transparent uppercase tracking-wide text-center"
+              className="text-[100px] sm:text-[100px] md:text-[140px] lg:text-[160px] lg:mr-28 font-extrabold text-transparent uppercase tracking-wide text-center"
               style={{
                 backgroundImage:
                   "repeating-linear-gradient(0deg, #ccc 0, #ccc 2px, transparent 2px, transparent 8px)",
