@@ -298,7 +298,7 @@ export default function PlatformPage() {
       <main className="md:ml-14 w-full overflow-y-auto  md:pt-0">
 
         {/* ✅ Overlapping Circles Section */}
-        <section className="min-h-screen flex items-center justify-center relative ml-0 md:ml-16 px-4 md:px-0 md:mt-0 -mt-24 overflow-hidden">
+        <section className="min-h-screen flex items-center justify-center relative ml-0 md:ml-16 px-4 md:px-0 -mt-24 md:-mt-12 overflow-hidden">
 
 
           <div className="relative flex -space-x-9 md:-space-x-10 overflow-hidden">
@@ -348,7 +348,7 @@ export default function PlatformPage() {
 
 
 {/* ✅ Futureproofed Section (perfectly aligned + dual underline row + logos under col2) */}
-<section className="px-4 md:px-[10vw] ml-0 md:ml-14 flex flex-col  md:mt-8 gap-12 max-w-[1500px] -mt-28  mx-auto bg-[#151617]">
+<section className="px-4 md:px-[10vw] ml-0 md:ml-14 flex flex-col  md:-mt-12 gap-12 max-w-[1500px] -mt-28   mx-auto bg-[#151617]">
 
   {/* Text + Content Side by Side */}
   <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
