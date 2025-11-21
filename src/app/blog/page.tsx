@@ -186,7 +186,7 @@ export default function BlogPage() {
         AI campus in Texas
       </>
     ),
-    style: "top-[250px] left-[50px] right-[40px]", // custom spacing for card 1
+    style: "top-[250px] left-[125px] right-[40px]   sm:top-[250px] sm:left-[50px] sm:right-[40px]", // custom spacing for card 1
   },
   {
     title: (
@@ -196,7 +196,7 @@ export default function BlogPage() {
         model building
       </>
     ),
-    style: "top-[290px] left-[50px] right-[30px]", // custom spacing for card 2
+    style: "top-[290px] left-[125px] right-[30px]  sm:top-[290px] sm:left-[50px] sm:right-[30px]", // custom spacing for card 2
   },
   {
     title: (
@@ -204,25 +204,26 @@ export default function BlogPage() {
         Our vision: Research
       </>
     ),
-    style: "top-[370px] left-[50px] right-[50px]", // custom spacing for card 3
+    style: "top-[370px] left-[125px] right-[50px]  sm:top-[370px] sm:left-[50px] sm:right-[50px]", // custom spacing for card 3
   },
 ];
 
 
 
   return (
-    <div className="flex bg-[#151617] text-white min-h-screen">
+    <div className="flex bg-[#151617] text-white min-h-screen  ">
       {/* ✅ Sidebar Navbar */}
       <Navbar />
 
       {/* ✅ Main Content */}
-      <main className="ml-44 flex-1 px-6 md:px-10 py-10">
+      <main className="ml-0 md:ml-44 flex-1 px-0  md:px-10 py-0 md:py-10 md:mt-0 mt-10  ">
+
         
 
         {/* ✅ SVG Card Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3  justify-items-center ">
           {cards.map((card, index) => (
-            <div key={index} className="relative w-[350px] h-[450px] group ">
+            <div key={index} className="relative w-full sm:w-[350px] h-[450px] group ">
               {/* SVG Outline */}
             <svg
   viewBox="0 0 380 480"
@@ -286,12 +287,15 @@ export default function BlogPage() {
   <DataCenterSection />
 </div>
 
+ 
+
 
 
 
 
       {/* ✅ Full-width Footer */}
-      <footer className="w-full flex justify-center items-center min-h-[40vh] -mb-10 bg-[#151617] mt-8">
+    <footer className="w-full flex justify-center items-center min-h-[40vh] mb-0 mt-0 md:mt-8 md:-mb-10 bg-[#151617]">
+
         <h1
           className="text-[100px] md:text-[160px] font-extrabold text-transparent mr-28 uppercase tracking-wide"
           style={{

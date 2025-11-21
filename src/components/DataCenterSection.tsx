@@ -214,7 +214,7 @@ export default function DataCenterSection() {
   );
 
   return (
-    <section className="bg-[#151617] text-white w-full px-4 sm:px-6 md:px-10 py-10 overflow-hidden">
+    <section className="bg-[#151617] text-white w-full  px-8 sm:px-6 md:px-10 py-0 md:py-10 overflow-hidden">
       {/* 🟦 Top Animated Line */}
       <AnimatedLine delay={0.5} />
 

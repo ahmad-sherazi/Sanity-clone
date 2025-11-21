@@ -475,74 +475,75 @@
  
 
 
-
-
-
 'use client'
 import { useState } from "react";
 import { motion } from "framer-motion";
 import Navbar from "@/components/Navbar";
-import RoleScrollSection from "@/components/RoleScrollSection"; // ✅ new import
-import DataCenterSection from "@/components/DataCenterSection"; // ✅ new import
-// import PinnedJobSection from "@/components/PinnedJobSection";
+import RoleScrollSection from "@/components/RoleScrollSection";
+import DataCenterSection from "@/components/DataCenterSection";
 
+// ⭐ MOBILE-ONLY HEIGHTS ADDED (desktop values untouched)
 const boxes = [
-  { letter: "R", height: "h-[480px]", offsetTop: "mt-2", offsetBottom: "mb-4" },
-  { letter: "o", height: "h-[360px]", offsetTop: "mt-4", offsetBottom: "mb-10" },
-  { letter: "l", height: "h-[520px]", offsetTop: "mt-20", offsetBottom: "mb-6" },
-  { letter: "e", height: "h-[400px]", offsetTop: "mt-8", offsetBottom: "mb-12" },
-  { letter: "s", height: "h-[460px]", offsetTop: "mt-16", offsetBottom: "mb-2" },
+  { letter: "R", height: "h-[260px] sm:h-[400px] md:h-[480px]", offsetTop: "mt-2", offsetBottom: "mb-4" },
+  { letter: "o", height: "h-[220px] sm:h-[300px] md:h-[360px]", offsetTop: "mt-4", offsetBottom: "mb-10" },
+  { letter: "l", height: "h-[280px] sm:h-[420px] md:h-[520px]", offsetTop: "mt-10 md:mt-20", offsetBottom: "mb-6" },
+  { letter: "e", height: "h-[230px] sm:h-[320px] md:h-[400px]", offsetTop: "mt-6 md:mt-8", offsetBottom: "mb-12" },
+  { letter: "s", height: "h-[250px] sm:h-[360px] md:h-[460px]", offsetTop: "mt-8 md:mt-16", offsetBottom: "mb-2" },
 ];
 
 export default function VisionPage() {
   return (
-    // ✅ Outer wrapper: hides only horizontal overflow
-    <div className="bg-[#151617] min-h-screen overflow-x-hidden">
-      {/* ✅ Main flex layout */}
+    <div className="bg-[#151617] min-h-screen overflow-x-hidden w-full">     {/* ⭐ MOBILE FULL WIDTH FIX */}
+      
       <div className="flex flex-col md:flex-row">
-        {/* ✅ Fixed Sidebar */}
         <Navbar />
 
-        {/* ✅ Scrollable Right Section */}
-        <section className="flex-1 overflow-y-auto max-w-6xl mx-auto px-4 md:ml-48 flex flex-col items-center justify-start bg-[#151617] mt-0 pt-0 pb-8">
-          
-          {/* Boxes Row */}
-          <div  className="
-    flex flex-wrap justify-center items-center gap-4 md:gap-5 mt-4
-    -ml-40 mr-96                   /* default mobile: centered */
-    md:ml-48            /* tablet/laptop: use offsets */
-    lg:ml-0 lg:mr-0               /* larger laptop/desktop: cleaner spacing */
-  ">
+        <section className="flex-1 overflow-y-auto w-full px-2 sm:px-4 md:ml-48 max-w-6xl mx-auto flex flex-col items-center justify-start bg-[#151617] mt-8 md:mt-0   pt-0 pb-8">
+          {/* ⭐ REPLACED -ml-40 mr-96 WITH MOBILE-SAFE ml-0 mr-0 */}
+          <div
+            className="
+              flex flex-wrap justify-center items-center gap-4 md:gap-5 mt-4
+              ml-0 mr-0
+              md:ml-48
+              lg:ml-0 lg:mr-0
+            "
+          >
             {boxes.map((box, i) => (
               <TiltLetter key={i} {...box} />
             ))}
           </div>
 
-          {/* Description Text */}
-          <p className="max-w-2xl text-left text-gray-200 mt-4 text-sm md:text-base leading-relaxed px-4 md:px-0">
+          {/* ⭐ MOBILE FULL WIDTH TEXT */}
+          <p className="w-full sm:max-w-2xl text-left text-gray-200 mt-4 text-sm md:text-base leading-relaxed px-3 md:px-0">
             Join our mission at poolside and work alongside some of the world's top talent,
             at the forefront of applied research and engineering at scale.
           </p>
 
-         <div className="flex justify-center w-full ">
-  <div className="border-b border-gray-100 my-8 w-3/4 md:w-[970px]"></div>
-</div>
+          <div className="flex justify-center w-full ">
+            <div className="border-b border-gray-100 my-8 w-3/4 md:w-[970px]"></div>
+          </div>
 
-
-          {/* ✅ Scrollable image animation section */}
-          <div className="mt-2 w-full">
+          <div className="mt-2 px-0 w-full">
             <RoleScrollSection />
           </div>
 
-          {/* ✅ Data Center Section */}
-          <div className="mt-2 w-full">
-            <DataCenterSection />
-          </div>
+          <div className="p-2 m-0 w-full [&_*]:!px-0 [&_*]:!mx-0">
+  <div className="py-6 space-y-4">
+    <DataCenterSection />
+  </div>
+</div>
 
-          {/* ✅ Full-width Footer */}
+
+        
+
+
+       
+
+
           <footer className="w-full flex justify-center items-center min-h-[40vh] bg-[#151617] mt-8 md:-mb-8">
+            {/* ⭐ MOBILE FONT SIZE FIX */}
             <h1
-              className="text-[70px] sm:text-[100px] md:text-[140px] lg:text-[160px] lg:mr-28 font-extrabold text-transparent uppercase tracking-wide text-center"
+              className="text-[50px] sm:text-[100px] md:text-[140px] lg:text-[160px] lg:mr-28 font-extrabold text-transparent uppercase tracking-wide text-center"
               style={{
                 backgroundImage:
                   "repeating-linear-gradient(0deg, #ccc 0, #ccc 2px, transparent 2px, transparent 8px)",
@@ -559,7 +560,7 @@ export default function VisionPage() {
   );
 }
 
-/* 🎯 Custom letter component with 3D tilt text only */
+/* 🎯 Letter Component (unchanged except responsive heights above) */
 function TiltLetter({
   letter,
   height,
@@ -588,7 +589,7 @@ function TiltLetter({
     <div
       onMouseMove={handleMouseMove}
       onMouseLeave={resetRotate}
-      className={`relative border border-white w-[90px] sm:w-[120px] md:w-[160px] lg:w-[175px] ${height} ${offsetTop} ${offsetBottom} flex items-center justify-center perspective-[800px]`}
+      className={`relative border border-white w-[78px] sm:w-[120px] md:w-[160px] lg:w-[175px] ${height} ${offsetTop} ${offsetBottom} flex items-center justify-center perspective-[800px]`}
     >
       <motion.span
         className="font-extrabold text-[#151617] select-none"
