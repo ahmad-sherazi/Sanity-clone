@@ -1275,7 +1275,7 @@ export default function Home() {
     { name: "PLATFORM", href: "/platform" },
     { name: "APPROACH", href: "/approach" },
     { name: "VISION", href: "/vision" },
-    { name: "CAREERS", href: "/careers" },
+    
     { name: "BLOG", href: "/blog" },
     { name: "NEWSROOM", href: "/newsroom" },
   ];
