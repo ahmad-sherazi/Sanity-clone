@@ -211,7 +211,7 @@ export default function BlogPage() {
 
 
   return (
-    <div className="flex bg-[#151617] text-white min-h-screen  ">
+    <div className="flex dark:bg-[#151617] bg-white dark:text-white text-black min-h-screen  ">
       {/* ✅ Sidebar Navbar */}
       <Navbar />
 
@@ -225,48 +225,61 @@ export default function BlogPage() {
           {cards.map((card, index) => (
             <div key={index} className="relative w-full sm:w-[350px] h-[450px] group ">
               {/* SVG Outline */}
-            <svg
+           <svg
   viewBox="0 0 380 480"
   fill="none"
   xmlns="http://www.w3.org/2000/svg"
   className="absolute inset-0 w-full h-full"
 >
-  {/* ✅ Hover background fill */}
+  {/* Hover background */}
   <path
     d="
       M50 70 L80 40 H95 V50 H180 V40 H265 V50 H350 V40 H365 V460 H35 V70 Z
     "
     fill="transparent"
-    className="transition-all duration-300 group-hover:fill-cyan-100"
+    className="
+      transition-all duration-300
+      dark:group-hover:fill-cyan-100
+      group-hover:fill-purple-500
+    "
   />
 
-  {/* ✅ Outline paths */}
+  {/* Outline */}
   <path
     d="
       M50 70 L80 40 H95 V50 H180 V40 H265 V50 H350 V40 H365 V460 H35 V70 Z
-      M195 460
-      a5 5 0 0 1 10 0
+      M195 460 a5 5 0 0 1 10 0
     "
-    stroke="#ffffff"
     strokeWidth="1"
-    className="transition-colors duration-300 group-hover:stroke-black"
-
+    className="
+      stroke-black
+      dark:stroke-white
+      transition-colors duration-300
+      dark:group-hover:stroke-black
+      group-hover:stroke-white
+    "
   />
+
   <path
     d="M125 50H275V190C275 200 268 210 255 210H145C132 210 125 200 125 190V50Z"
-    stroke="#ffffff"
     strokeWidth="1"
-    className="transition-colors duration-300 group-hover:stroke-black"
-
+    className="
+      stroke-black
+      dark:stroke-white
+      transition-colors duration-300
+      dark:group-hover:stroke-black
+      group-hover:stroke-white
+    "
   />
 </svg>
+
 
 
               {/* ✅ Centered Text */}
               <div className={`absolute text-left leading-relaxed ${card.style}`}>
 
 
-  <p className="text-2xl leading-relaxed text-white group-hover:text-black transition">
+  <p className="text-2xl leading-relaxed dark:text-white text-black dark:group-hover:text-black group-hover:text-white transition">
     {card.title}
   </p>
 </div>
@@ -294,7 +307,7 @@ export default function BlogPage() {
 
 
       {/* ✅ Full-width Footer */}
-    <footer className="w-full flex justify-center items-center min-h-[40vh] mb-0 mt-0 md:mt-8 md:-mb-10 bg-[#151617]">
+    <footer className="w-full flex justify-center items-center min-h-[40vh] mb-0 mt-0 md:mt-8 md:-mb-10 dark:bg-[#151617] bg-white ">
 
         <h1
           className="text-[100px] md:text-[160px] font-extrabold text-transparent mr-0 md:mr-28 uppercase tracking-wide"

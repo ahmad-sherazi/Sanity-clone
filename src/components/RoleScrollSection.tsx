@@ -39,10 +39,10 @@ export default function RoleScrollSection() {
   };
 
   return (
-    <section className="bg-[#151617] text-white py-16 overflow-hidden">
+    <section className="dark:bg-[#151617] bg-white dark:text-white text-black py-16 overflow-hidden">
       <div
         ref={scrollRef}
-        className="overflow-x-auto scrollbar-thin scrollbar-thumb-gray-600 scrollbar-track-gray-800 scroll-smooth"
+        className="overflow-x-auto scrollbar-thin dark:scrollbar-thumb-gray-600 scrollbar-thumb-gray-900 dark:scrollbar-track-gray-800 scrollbar-track-black scroll-smooth"
       >
         <div className="flex gap-6 px-10 min-w-max pb-8 items-end">
           {people.map((person, index) => {
@@ -56,7 +56,7 @@ export default function RoleScrollSection() {
               >
                 {/* Animated Image Box (height + top margin dynamic) */}
                 <div
-                  className="relative w-full border border-white overflow-hidden transition-[height,margin-top] duration-300 ease-[cubic-bezier(0.33,1,0.68,1)]"
+                  className="relative w-full border dark:border-white border-black overflow-hidden transition-[height,margin-top] duration-300 ease-[cubic-bezier(0.33,1,0.68,1)]"
                   style={{
                     height: `${height}px`,
                     marginTop: `${topOffset}px`,
@@ -73,7 +73,7 @@ export default function RoleScrollSection() {
                 {/* Text (fixed bottom alignment) */}
                 <div className="mt-3 text-center w-full">
                   <h3 className="font-semibold text-base">{person.name}</h3>
-                  <p className="text-gray-300 text-sm mt-1 leading-snug">
+                  <p className="dark:text-gray-300 text-gray-600 text-sm mt-1 leading-snug">
                     {person.desc}
                   </p>
                 </div>

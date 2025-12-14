@@ -8,12 +8,12 @@ import { motion } from "framer-motion";
 
 export default function ApproachPage() {
   return (
-    <div className="bg-[#151617]  min-h-screen">
+    <div className="dark:bg-[#151617] bg-white  min-h-screen">
       {/* ✅ Navbar */}
       <Navbar />
 
       {/* ✅ Approach Section */}
-     <section className="bg-[#151617] text-white py-0 md:mt-0 md:-pt-32 pt-20 md:py-16 px-4 md:px-8 ml-0 md:ml-26">
+     <section className="dark:bg-[#151617] bg-white dark:text-white text-black py-0 md:mt-0 md:-pt-32 pt-20 md:py-16 px-4 md:px-8 ml-0 md:ml-26">
 
         {/* Top Text */}
         {/* <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-12 mb-12">
@@ -36,11 +36,11 @@ export default function ApproachPage() {
         </div> */}
 {/* Diagram Heading & Description */}
 <div className="max-w-4xl mx-auto text-left mb-8">
-  <h3 className="md:text-5xl text-3xl font-normal text-white mb-2 mt-0 md:mt-16"> Outcomes, not tokens.
+  <h3 className="md:text-5xl text-3xl font-normal dark:text-white text-black mb-2 mt-0 md:mt-16"> Outcomes, not tokens.
               <br />
               Inside your boundary.</h3>
-     <p className="text-[#BBBBBB] leading-relaxed mt-0 md:mt-20 md:text-2xl text-md">
-              <span className="font-semibold  text-white">
+     <p className="dark:text-[#BBBBBB] text-gray-600 leading-relaxed mt-0 md:mt-20 md:text-2xl text-md">
+              <span className="font-semibold  dark:text-white text-black">
                 Forward Deployed Research Engineers
               </span>{" "}
               embed with your teams to design,<br /> build, and operate intelligence
@@ -49,7 +49,7 @@ export default function ApproachPage() {
 </div>
 
 {/* Diagram Box */}
-<div className="max-w-4xl mx-auto border border-white p-0 md:p-6 mb-0 md:mb-12 flex items-center justify-center">
+<div className="max-w-4xl mx-auto border dark:border-white border-black p-0 md:p-6 mb-0 md:mb-12 flex items-center justify-center">
 
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -89,9 +89,9 @@ export default function ApproachPage() {
         </div>
 
         {/* Bottom Text Columns */}
-        <div className="max-w-4xl mx-auto grid md:grid-cols-4 gap-10 text-md md:mt-0 mt-4 text-[#AAAAAA]">
+        <div className="max-w-4xl mx-auto grid md:grid-cols-4 gap-10 text-md md:mt-0 mt-4 dark:text-[#AAAAAA] text-gray-500">
           <div>
-            <h3 className="font-semibold text-gray-100 mb-2">Outcome ownership</h3>
+            <h3 className="font-semibold dark:text-gray-100 text-black mb-2">Outcome ownership</h3>
             <p>
               We don't hand off models. We take joint responsibility for outcomes,
               adoption and measurable, long-lasting business impact.
@@ -99,7 +99,7 @@ export default function ApproachPage() {
           </div>
 
           <div>
-            <h3 className="font-semibold text-gray-100 mb-2">
+            <h3 className="font-semibold dark:text-gray-100 text-black mb-2">
               Inside your security boundary
             </h3>
             <p>
@@ -110,7 +110,7 @@ export default function ApproachPage() {
           </div>
 
           <div>
-            <h3 className="font-semibold text-gray-100 mb-2">
+            <h3 className="font-semibold dark:text-gray-100 text-black mb-2">
               Built for complex environments
             </h3>
             <p>
@@ -120,7 +120,7 @@ export default function ApproachPage() {
           </div>
 
           <div>
-            <h3 className="font-semibold text-gray-100 mb-2">
+            <h3 className="font-semibold dark:text-gray-100 text-black mb-2">
               Executive-grade governance
             </h3>
             <p>
@@ -144,14 +144,14 @@ export default function ApproachPage() {
 <div className="flex justify-between gap-10 mt-6 md:mt-12 ml-0 md:ml-28 px-4 md:px-[10vw] max-w-[1500px] mx-auto relative z-20">
   {/* Left underline */}
   <motion.div
-    className="relative w-full h-[2px] bg-[#1a1b1c] overflow-hidden"
+    className="relative w-full h-[2px] dark:bg-[#1a1b1c] bg-white overflow-hidden"
     initial={{ opacity: 0 }}
     whileInView={{ opacity: 1 }}
     viewport={{ once: true }}
     transition={{ duration: 0.3 }}
   >
     <motion.div
-      className="absolute right-0 top-0 h-[1px] bg-white"
+      className="absolute right-0 top-0 h-[1px] dark:bg-white bg-black"
       initial={{ width: "0%" }}
       whileInView={{ width: "100%" }}
       viewport={{ once: true }}
@@ -161,14 +161,14 @@ export default function ApproachPage() {
 
   {/* Right underline */}
   <motion.div
-    className="relative w-full h-[1px] bg-[#1a1b1c] overflow-hidden"
+    className="relative w-full h-[1px] dark:bg-[#1a1b1c] bg-white overflow-hidden"
     initial={{ opacity: 0 }}
     whileInView={{ opacity: 1 }}
     viewport={{ once: true }}
     transition={{ duration: 0.3 }}
   >
     <motion.div
-      className="absolute right-0 top-0 h-[1px] bg-white"
+      className="absolute right-0 top-0 h-[1px] dark:bg-white bg-black"
       initial={{ width: "0%" }}
       whileInView={{ width: "100%" }}
       viewport={{ once: true }}
@@ -186,14 +186,14 @@ export default function ApproachPage() {
 
 
 {/* ✅ Speak to Us + Form + FAQs Section (aligned with circle section width) */}
-<section className="px-4 md:px-[10vw] ml-0 md:ml-28 py-0 md:py-20 md:mt-0 mt-20 text-white bg-[#151617] grid md:grid-cols-2 gap-20 max-w-[1500px] mx-auto">
+<section className="px-4 md:px-[10vw] ml-0 md:ml-28 py-0 md:py-20 md:mt-0 mt-20 dark:text-white text-black dark:bg-[#151617] bg-white grid md:grid-cols-2 gap-20 max-w-[1500px] mx-auto">
   {/* LEFT SIDE — Text */}
   <div className="flex flex-col justify-start gap-6">
     <div>
       <h2 className="text-3xl font-normal leading-snug">
         Speak to us about <br /> becoming an AI Company
       </h2>
-      <p className="text-[#BBBBBB] text-base max-w-sm mt-3">
+      <p className="dark:text-[#BBBBBB] text-gray-600 text-base max-w-sm mt-3">
         Ideal for highly regulated spaces like Financial Services, Defense,
         and Industrial.
       </p>
@@ -205,24 +205,24 @@ export default function ApproachPage() {
     {/* Form */}
     <form className="flex flex-col gap-8 text-base max-w-lg">
       <div>
-        <label className="block text-[#BBBBBB] mb-2 tracking-wider text-sm uppercase">
+        <label className="block dark:text-[#BBBBBB] text-gray-700 mb-2 tracking-wider text-sm uppercase">
           ### Your Name
         </label>
         <input
           type="text"
           placeholder="Your full name"
-          className="w-full border-b-3 bg-[#333333] border-gray-300 py-3 text-md focus:outline-none focus:border-b-cyan-100 transition-all placeholder-[#BBBBBB]"
+          className="w-full border-b-3 dark:bg-[#333333] bg-stone-200 dark:border-gray-300 border-gray-400 py-3 text-md focus:outline-none dark:focus:border-b-cyan-100  focus:border-b-purple-600 transition-all dark:placeholder-[#BBBBBB]"
         />
       </div>
 
       <div>
-        <label className="block text-[#BBBBBB] mb-2 tracking-wider text-sm uppercase">
+        <label className="block dark:text-[#BBBBBB] text-gray-700 mb-2 tracking-wider text-sm uppercase">
           ### Your Company Email
         </label>
         <input
           type="email"
           placeholder="you@company.com"
-          className="w-full border-b-3 bg-[#333333] border-gray-300 py-3 text-md focus:outline-none focus:border-b-cyan-100 transition-all placeholder-[#BBBBBB]"
+          className="w-full border-b-3 dark:bg-[#333333] bg-stone-200 dark:border-gray-300 border-gray-400 py-3 text-md focus:outline-none dark:focus:border-b-cyan-100  focus:border-b-purple-600 transition-all dark:placeholder-[#BBBBBB]"
         />
       </div>
 
@@ -232,12 +232,12 @@ export default function ApproachPage() {
           <label className="relative flex items-center cursor-pointer">
             <input
               type="checkbox"
-              className="peer appearance-none w-5 h-5 border border-gray-500 rounded-sm transition-colors cursor-pointer checked:bg-cyan-100 checked:border-cyan-100 focus:outline-none"
+              className="peer appearance-none w-5 h-5 border dark:border-gray-500 border-gray-600 rounded-sm transition-colors cursor-pointer dark:checked:bg-cyan-100 checked:bg-purple-500 dark:checked:border-cyan-100 checked:border-purple-500 focus:outline-none"
             />
           </label>
-          <span className="text-gray-300 text-sm">
+          <span className="dark:text-gray-300 text-gray-600 text-sm">
             I agree to the{" "}
-            <span className="text-cyan-100 underline cursor-pointer">
+            <span className="dark:text-cyan-100 text-purple-600 underline cursor-pointer">
               Privacy Policy
             </span>
           </span>
@@ -245,7 +245,7 @@ export default function ApproachPage() {
 
         <button
           type="submit"
-          className="bg-[#333333] hover:bg-cyan-100 hover:text-black text-[#BBBBBB] text-base py-2 px-6 rounded transition-all"
+          className="dark:bg-[#333333] bg-purple-400  dark:hover:bg-cyan-100 hover:bg-purple-500 dark:hover:text-black hover:text-white dark:text-[#BBBBBB] text-white text-base py-2 px-6 rounded transition-all"
         >
           ↑ Submit
         </button>
@@ -258,7 +258,7 @@ export default function ApproachPage() {
 
 
   {/* ✅ Footer */}
-        <div className="flex justify-center items-center min-h-[40vh] ml-0 md:ml-12 bg-[#151617]">
+        <div className="flex justify-center items-center min-h-[40vh] ml-0 md:ml-12 dark:bg-[#151617] bg-white">
           <h1
             className="text-[100px] md:text-[160px] font-extrabold text-transparent uppercase tracking-wide"
             style={{

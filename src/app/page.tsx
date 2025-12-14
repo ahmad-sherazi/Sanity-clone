@@ -2227,33 +2227,45 @@ export default function Home() {
 
 
         </aside>
+  {/* ✅ Mobile Top Navbar */}
+      <div className="md:hidden fixed top-0 left-0 w-full bg-white dark:bg-[#151617] flex justify-between items-center px-6 py-4 z-50 dark:text-white text-black font-mono tracking-wider border-b dark:border-gray-900 border-gray-200">
+        <Link href="/"><span className="dark:text-cyan-100 text-purple-600 font-semibold">SANITY</span></Link>
 
-        {/* ---------- MOBILE NAVBAR ---------- */}
-        <div className="md:hidden fixed top-0 left-0 w-full bg-black flex justify-between items-center px-6 py-4 z-50 text-white font-mono tracking-wider border-b border-gray-900">
-          <span className="text-cyan-100 font-semibold">SANITY</span>
-          <button
-            onClick={() => setMenuOpen(!menuOpen)}
-            className="text-gray-300"
-            aria-label="Toggle menu"
-          >
-            {menuOpen ? <X size={22} /> : <Menu size={22} />}
-          </button>
+        <button
+          onClick={() => setMenuOpen(!menuOpen)}
+          className="dark:text-gray-300 text-gray-500"
+          aria-label="Toggle menu"
+        >
+          {menuOpen ? <X size={22} /> : <Menu size={22} />}
+        </button>
 
-          {menuOpen && (
-            <div className="absolute top-14 left-0 w-full bg-black flex flex-col gap-3 py-4 px-8 text-sm border-t border-gray-800">
-              {links.map((link, i) => (
-                <Link
-                  key={i}
-                  href={link.href}
-                  onClick={() => setMenuOpen(false)}
-                  className="hover:text-white transition-colors text-gray-300"
-                >
-                  {link.name}
-                </Link>
-              ))}
-            </div>
-          )}
-        </div>
+        {menuOpen && (
+          <div className="absolute top-14 left-0 w-full bg-white dark:bg-[#151617] flex flex-col gap-3 py-4 px-8 text-sm border-t dark:border-gray-800 border-gray-200">
+            {links.map((link, i) => (
+              <Link
+                key={i}
+                href={link.href}
+                onClick={() => setMenuOpen(false)}
+                className={`dark:hover:text-cyan-100 hover:text-purple-600  transition-colors ${
+                  link.name === "PLATFORM" ? "dark:text-gray-300 text-gray-600" : "dark:text-gray-300 text-gray-600"
+                }`}
+              >
+                {link.name}
+              </Link>
+            ))}
+
+
+        <button
+  onClick={toggleTheme}
+  className="mt-4 dark:text-cyan-100 text-purple-600 dark:hover:bg-cyan-100 hover:bg-purple-500 dark:hover:text-black hover:text-white border dark:border-cyan-100 border-purple-600 px-1 py-1 rounded text-xs transition"
+>
+  Toggle Theme
+</button>
+
+
+          </div>
+        )}
+      </div>
 
         {/* ---------- MAIN CONTENT ---------- */}
         <main className="flex-1 md:ml-28 flex flex-col items-center mt-16 md:mt-0 px-4 sm:px-6">
@@ -2297,7 +2309,7 @@ export default function Home() {
     <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-0">
       
       {/* Top Left - Foundational AI */}
-      <div className="border dark:border-[#BBBBBB] border-r-0 border-black p-6 md:p-8 flex flex-col justify-between min-h-[400px]">
+      <div className="border dark:border-[#BBBBBB] sm:border-r-0 border-black p-6 md:p-8 flex flex-col justify-between min-h-[400px]">
         <h3 className="dark:text-white text-black text-2xl font-mono mb-4">
           Foundational AI, built and battle-hardened for enterprise.
         </h3>
@@ -2332,7 +2344,7 @@ export default function Home() {
       </div>
 
       {/* Middle Left - Developer Ecosystem */}
-      <div className="border dark:border-[#BBBBBB] border-black border-r-0 border-t-0 p-6 md:p-8 flex flex-col justify-between min-h-[400px]">
+      <div className="border dark:border-[#BBBBBB] border-black sm:border-r-0 sm:border-t-0 p-6 md:p-8 flex flex-col justify-between min-h-[400px]">
         <svg
           className="w-full h-56 md:h-96 mt-4 mb-6"
           viewBox="0 0 200 200"
@@ -2358,7 +2370,7 @@ export default function Home() {
       </div>
 
       {/* Middle Right - Data and Knowledge */}
-      <div className="border dark:border-[#BBBBBB] border-black  border-t-0 p-6 md:p-8 flex flex-col justify-between min-h-[400px]">
+      <div className="border dark:border-[#BBBBBB] border-black  sm:border-t-0 p-6 md:p-8 flex flex-col justify-between min-h-[400px]">
         <svg
           className="w-full h-56 md:h-96 mt-4 mb-6"
           viewBox="0 0 200 200"
@@ -2380,7 +2392,7 @@ export default function Home() {
       </div>
 
       {/* Bottom Left - Presentation Modules */}
-      <div className="border dark:border-[#BBBBBB] border-black  border-t-0 border-r-0 p-6 md:p-8 flex flex-col justify-between min-h-[400px]">
+      <div className="border dark:border-[#BBBBBB] border-black  sm:border-t-0 sm:border-r-0 p-6 md:p-8 flex flex-col justify-between min-h-[400px]">
         <svg
           className="w-full h-56 md:h-96 mt-4 mb-6"
           viewBox="0 0 200 200"
@@ -2403,7 +2415,7 @@ export default function Home() {
       </div>
 
       {/* Bottom Right - CTA Section */}
-      <div className="border dark:border-[#BBBBBB] border-black border-t-0 p-6 md:p-8 flex flex-col justify-between min-h-[400px] dark:bg-[#151617] bg-white">
+      <div className="border dark:border-[#BBBBBB] border-black sm:border-t-0 p-6 md:p-8 flex flex-col justify-between min-h-[400px] dark:bg-[#151617] bg-white">
         <h2 className="dark:text-gray-100 text-black text-2xl font-semibold mb-6 leading-tight">
           Delivering intelligence across your development lifecycle—from IDE to terminal,
           agents to custom applications.
@@ -2422,8 +2434,8 @@ export default function Home() {
 
 
 
-          {/* SANITY TEXT */}
-          <div className="flex justify-center items-center mt-20 sm:mt-32 md:mt-40 mb-20 sm:mb-32 md:mb-40 min-h-[30vh] md:min-h-[40vh] bg-[#151617] text-center">
+          {/* SANITY TEXT
+          <div className="flex justify-center items-center mt-20 sm:mt-32 md:mt-40 mb-20 sm:mb-32 md:mb-40 min-h-[30vh] md:min-h-[40vh] dark:bg-[#151617] bg-whitye text-center">
             <h1
               className="text-[70px] sm:text-[100px] md:text-[160px] font-extrabold text-transparent uppercase tracking-wide transition-all duration-300"
               style={{
@@ -2436,7 +2448,25 @@ export default function Home() {
             >
               Sanity
             </h1>
-          </div>
+          </div> */}
+
+
+          {/* SANITY TEXT */}
+<div className="flex justify-center items-center mt-20 sm:mt-32 md:mt-40 mb-20 sm:mb-32 md:mb-40 min-h-[30vh] md:min-h-[40vh] dark:bg-[#151617] bg-white text-center">
+  <h1
+    className="
+      text-[70px] sm:text-[100px] md:text-[160px]
+      font-extrabold uppercase tracking-wide
+      text-transparent bg-clip-text
+      transition-all duration-300
+      bg-[repeating-linear-gradient(0deg,#7c3aed_0,#7c3aed_2px,transparent_2px,transparent_8px)]
+      dark:bg-[repeating-linear-gradient(0deg,#cffafe_0,#cffafe_2px,transparent_2px,transparent_8px)]
+    "
+  >
+    Sanity
+  </h1>
+</div>
+
 
 
 
@@ -2587,7 +2617,7 @@ export default function Home() {
       <div className="border-t dark:border-cyan-100 border-purple-600 pt-4">
         <a
           href="#"
-          className="dark:text-cyan-100 text-purple-600 font-mono text-md flex items-center gap-2 dark:hover:text-black hover:text-white dark:hover:bg-cyan-100 hover:bg-purple-500 transition-colors md:ml-60 justify-center ml-64 md:justify-start"
+          className="dark:text-cyan-100 text-purple-600 font-mono text-md flex items-center gap-2 dark:hover:text-black hover:text-white dark:hover:bg-cyan-100 hover:bg-purple-500 transition-colors md:ml-60 justify-center ml-26 md:justify-start"
         >
           → OUR PATH TO AGI
         </a>
@@ -2609,7 +2639,7 @@ export default function Home() {
                 </h2>
                 <a
                   href="#"
-                  className="dark:text-cyan-100 text-purple-600 font-semibold uppercase tracking-wide text-sm flex items-center  ml-60 justify-center gap-2 dark:hover:text-black hover:text-white dark:hover:bg-cyan-100 hover:bg-purple-500 transition"
+                  className="dark:text-cyan-100 text-purple-600 font-semibold uppercase tracking-wide text-sm flex items-center   justify-center gap-2 dark:hover:text-black hover:text-white dark:hover:bg-cyan-100 hover:bg-purple-500 transition"
                 >
                   → Talk to us today
                 </a>

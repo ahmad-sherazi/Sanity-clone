@@ -493,12 +493,12 @@ const boxes = [
 
 export default function VisionPage() {
   return (
-    <div className="bg-[#151617] min-h-screen overflow-x-hidden w-full">     {/* ⭐ MOBILE FULL WIDTH FIX */}
+    <div className="dark:bg-[#151617] bg-white min-h-screen overflow-x-hidden w-full">     {/* ⭐ MOBILE FULL WIDTH FIX */}
       
       <div className="flex flex-col md:flex-row">
         <Navbar />
 
-        <section className="flex-1 overflow-y-auto w-full px-2 sm:px-4 md:ml-48 max-w-6xl mx-auto flex flex-col items-center justify-start bg-[#151617] mt-8 md:mt-0   pt-0 pb-8">
+        <section className="flex-1 overflow-y-auto w-full px-2 sm:px-4 md:ml-48 max-w-6xl mx-auto flex flex-col items-center justify-start dark:bg-[#151617] bg-white mt-8 md:mt-0   pt-0 pb-8">
           {/* ⭐ REPLACED -ml-40 mr-96 WITH MOBILE-SAFE ml-0 mr-0 */}
           <div
             className="
@@ -514,13 +514,13 @@ export default function VisionPage() {
           </div>
 
           {/* ⭐ MOBILE FULL WIDTH TEXT */}
-          <p className="w-full sm:max-w-2xl text-left text-gray-200 mt-4 text-sm md:text-base leading-relaxed px-3 md:px-0">
+          <p className="w-full sm:max-w-2xl text-left dark:text-gray-200 text-gray-600 mt-4 text-sm md:text-base leading-relaxed px-3 md:px-0">
             Join our mission at poolside and work alongside some of the world's top talent,
             at the forefront of applied research and engineering at scale.
           </p>
 
           <div className="flex justify-center w-full ">
-            <div className="border-b border-gray-100 my-8 w-3/4 md:w-[970px]"></div>
+            <div className="border-b dark:border-gray-100 border-black my-8 w-3/4 md:w-[970px]"></div>
           </div>
 
           <div className="mt-2 px-0 w-full">
@@ -540,7 +540,7 @@ export default function VisionPage() {
        
 
 
-          <footer className="w-full flex justify-center items-center min-h-[40vh] bg-[#151617] mt-8 md:-mb-8">
+          <footer className="w-full flex justify-center items-center min-h-[40vh] dark:bg-[#151617] bg-white mt-8 md:-mb-8">
             {/* ⭐ MOBILE FONT SIZE FIX */}
             <h1
               className="text-[100px] sm:text-[100px] md:text-[140px] lg:text-[160px] lg:mr-28 font-extrabold text-transparent uppercase tracking-wide text-center"
@@ -589,23 +589,30 @@ function TiltLetter({
     <div
       onMouseMove={handleMouseMove}
       onMouseLeave={resetRotate}
-      className={`relative border border-white w-[78px] sm:w-[120px] md:w-[160px] lg:w-[175px] ${height} ${offsetTop} ${offsetBottom} flex items-center justify-center perspective-[800px]`}
-    >
-      <motion.span
-        className="font-extrabold text-[#151617] select-none"
-        style={{
-          fontSize: "clamp(5rem, 12vw, 16rem)",
-          WebkitTextStroke: "1px #fff",
-          textShadow: "2px 2px 4px rgba(255,255,255,0.25)",
-        }}
-        animate={{
-          rotateX: rotate.x,
-          rotateY: rotate.y,
-        }}
-        transition={{ type: "spring", stiffness: 200, damping: 15 }}
-      >
-        {letter}
-      </motion.span>
+      className={`relative border dark:border-white border-black w-[56px] sm:w-[120px] md:w-[160px] lg:w-[175px] ${height} ${offsetTop} ${offsetBottom} flex items-center justify-center perspective-[800px]`}
+    ><motion.span
+  className="
+    font-extrabold select-none
+    dark:text-[#151617] text-white
+    dark:[-webkit-text-stroke:1px_#fff]
+    [-webkit-text-stroke:1px_#000]
+   dark:shadow-[2px_2px_4px_rgba(200,200,200,0.25)]
+
+
+    shadow-[2px_2px_4px_rgba(0,0,0,0.25)]
+  "
+  style={{
+    fontSize: "clamp(5rem, 12vw, 16rem)",
+  }}
+  animate={{
+    rotateX: rotate.x,
+    rotateY: rotate.y,
+  }}
+  transition={{ type: "spring", stiffness: 200, damping: 15 }}
+>
+  {letter}
+</motion.span>
+
     </div>
   );
 }

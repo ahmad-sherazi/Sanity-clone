@@ -186,7 +186,7 @@ export default function DataCenterSection() {
         transition={{ duration: 0.1 }}
       >
         <motion.div
-          className="absolute right-0 top-0 h-[1px] bg-white"
+          className="absolute right-0 top-0 h-[1px] dark:bg-white bg-black"
           initial={{ width: "0%" }}
           whileInView={{ width: "100%" }}
           viewport={{ once: true }}
@@ -203,7 +203,7 @@ export default function DataCenterSection() {
         transition={{ duration: 0.1 }}
       >
         <motion.div
-          className="absolute right-0 top-0 h-[1px] bg-white"
+          className="absolute right-0 top-0 h-[1px] dark:bg-white bg-black"
           initial={{ width: "0%" }}
           whileInView={{ width: "100%" }}
           viewport={{ once: true }}
@@ -214,7 +214,7 @@ export default function DataCenterSection() {
   );
 
   return (
-    <section className="bg-[#151617] text-white w-full  px-8 sm:px-6 md:px-10 py-0 md:py-10 overflow-hidden">
+    <section className="dark:bg-[#151617] bg-white dark:text-white text-black w-full  px-8 sm:px-6 md:px-10 py-0 md:py-10 overflow-hidden">
       {/* 🟦 Top Animated Line */}
       <AnimatedLine delay={0.5} />
 
@@ -238,20 +238,35 @@ export default function DataCenterSection() {
             <div
               key={index}
               className={`group transition-colors duration-200 ${
-                index !== jobs.length - 1 ? "border-b border-[#888888]" : ""
+                index !== jobs.length - 1 ? "border-b dark:border-[#888888] border-black" : ""
               }`}
             >
-              <Link
-                href={job.href}
-                className="flex items-center justify-between w-full py-4 sm:py-6 md:py-10 hover:bg-cyan-100 px-0"
-              >
-                <span className="text-cyan-100 group-hover:text-black transition-colors duration-200 text-sm sm:text-md whitespace-normal sm:whitespace-nowrap text-left">
-                  {job.title}
-                </span>
-                <span className="text-black opacity-0 group-hover:opacity-100 transition-opacity duration-200 text-lg">
-                  →
-                </span>
-              </Link>
+              <Link href={job.href} className="block">
+  <div
+    className="group flex items-center justify-between w-full
+               py-4 sm:py-6 md:py-10 px-0
+               dark:hover:bg-cyan-100 hover:bg-purple-500
+               transition-colors"
+  >
+    <span
+      className="dark:text-cyan-100 text-purple-600
+                 dark:group-hover:text-black group-hover:text-white
+                 transition-colors duration-200
+                 text-sm sm:text-md whitespace-normal sm:whitespace-nowrap text-left"
+    >
+      {job.title}
+    </span>
+
+    <span
+      className="dark:text-black text-white
+                 opacity-0 group-hover:opacity-100
+                 transition-opacity duration-200 text-lg"
+    >
+      →
+    </span>
+  </div>
+</Link>
+
             </div>
           ))}
         </div>

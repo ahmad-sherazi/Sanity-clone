@@ -371,14 +371,14 @@ export default function ThreeColSection() {
     delay?: number;
   }) => (
     <motion.div
-      className="relative h-[1px] bg-transparent overflow-hidden"
+      className="relative h-[2px] bg-transparent overflow-hidden"
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       viewport={{ once: true }}
       transition={{ duration: 0.2 }}
     >
       <motion.div
-        className="absolute right-0 top-0 h-[1px] bg-white"
+        className="absolute right-0 top-0 h-[1.5px] dark:bg-white bg-black"
         initial={{ width: "0%" }}
         whileInView={{ width }}
         viewport={{ once: true }}
@@ -388,7 +388,7 @@ export default function ThreeColSection() {
   );
 
   return (
-    <section className="bg-[#151617] text-white w-full px-4 md:px-10 py-16 overflow-x-hidden overflow-y-visible ml-0 md:ml-16">
+    <section className="dark:bg-[#151617] bg-white dark:text-white text-black w-full px-4 md:px-10 py-16 overflow-x-hidden overflow-y-visible ml-0 md:ml-16">
       <div className="max-w-4xl mx-auto">
         {/* 🟦 Top Motion Line */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
@@ -412,7 +412,7 @@ export default function ThreeColSection() {
           </div>
 
           {/* Right 2/3 Content */}
-          <div className="md:col-span-2 flex flex-col divide-y divide-[#888888]">
+          <div className="md:col-span-2 flex flex-col divide-y dark:divide-[#888888] divide-black">
             {steps.map((step, index) => (
               <div
                 key={index}
@@ -430,7 +430,7 @@ export default function ThreeColSection() {
 
                 <div className="flex-1 text-left">
                   <h3 className="text-xl sm:text-2xl md:text-2xl font-normal mb-2">{step.title}</h3>
-                  <p className="text-gray-300 text-sm sm:text-sm md:text-sm leading-relaxed">
+                  <p className="dark:text-gray-300 text-gray-600 text-sm sm:text-sm md:text-sm leading-relaxed">
                     {step.desc}
                   </p>
                 </div>
@@ -448,7 +448,7 @@ export default function ThreeColSection() {
 
         {/* FEATURES GRID SECTION */}
         {/* FEATURES GRID SECTION */}
-<section className="w-full bg-[#151617] px-1 md:px-0 mt-8">
+<section className="w-full dark:bg-[#151617] bg-white px-1 md:px-0 mt-8">
   <div className="mx-auto">
     <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
       {/* Column 1: Motion Line */}
@@ -459,14 +459,14 @@ export default function ThreeColSection() {
       {/* Column 2 & 3: Feature Cards */}
       <div className="md:col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-4">
         {/* Top Left */}
-        <div className="border border-[#BBBBBB] p-4 md:p-6 flex flex-col items-start h-auto">
-          <h3 className="text-white text-xl sm:text-2xl font-mono mb-4">
+        <div className="border dark:border-[#BBBBBB] border-black p-4 md:p-6 flex flex-col items-start h-auto">
+          <h3 className="dark:text-white text-black text-xl sm:text-2xl font-mono mb-4">
             Foundational AI, built and battle-hardened for enterprise.
           </h3>
         </div>
 
         {/* Top Right */}
-        <div className="border border-[#BBBBBB] p-4 md:p-6 flex flex-col items-start h-auto">
+        <div className="border dark:border-[#BBBBBB] border-black p-4 md:p-6 flex flex-col items-start h-auto">
           <svg
             className="w-full h-60 sm:h-72 md:h-80 mb-2 md:mb-4"
             viewBox="0 0 200 200"
@@ -482,10 +482,10 @@ export default function ThreeColSection() {
               <circle cx="40" cy="100" r="4" fill="#666" />
             </g>
           </svg>
-          <h3 className="text-gray-100 text-md font-bold mb-1">
+          <h3 className="dark:text-gray-100 text-black text-md font-bold mb-1">
             Agentic and Multi-Agent Orchestration
           </h3>
-          <p className="text-[#BBBBBB] text-sm leading-relaxed">
+          <p className="dark:text-[#BBBBBB] text-gray-600 text-sm leading-relaxed">
             Single and multi-agent workflows that can plan, take action, and reason.
             Leverage our framework to build anything from simple agents to complex,
             multi-step agentic systems.
@@ -493,7 +493,7 @@ export default function ThreeColSection() {
         </div>
 
         {/* Middle Left */}
-        <div className="border border-[#BBBBBB] p-4 md:p-6 flex flex-col items-start h-auto">
+        <div className="border dark:border-[#BBBBBB] border-black p-4 md:p-6 flex flex-col items-start h-auto">
           <svg
             className="w-full h-60 sm:h-72 md:h-80 mb-2 md:mb-4"
             viewBox="0 0 200 200"
@@ -510,15 +510,15 @@ export default function ThreeColSection() {
               <circle cx="100" cy="165" r="5" />
             </g>
           </svg>
-          <h3 className="text-gray-100 text-md font-bold mb-1">Developer Ecosystem</h3>
-          <p className="text-[#BBBBBB] text-sm leading-relaxed">
+          <h3 className="dark:text-gray-100 text-black text-md font-bold mb-1">Developer Ecosystem</h3>
+          <p className="dark:text-[#BBBBBB] text-gray-600 text-sm leading-relaxed">
             Full integrations, libraries and SDKs across your entire development
             workflow. Integrate more with your engineers.
           </p>
         </div>
 
         {/* Middle Right */}
-        <div className="border border-[#BBBBBB] p-4 md:p-6 flex flex-col items-start h-auto">
+        <div className="border dark:border-[#BBBBBB] border-black p-4 md:p-6 flex flex-col items-start h-auto">
           <svg
             className="w-full h-60 sm:h-72 md:h-80 mb-2 md:mb-4"
             viewBox="0 0 200 200"
@@ -535,8 +535,8 @@ export default function ThreeColSection() {
               <line x1="90" y1="135" x2="110" y2="135" />
             </g>
           </svg>
-          <h3 className="text-gray-100 text-md font-bold mb-1">Data and Knowledge</h3>
-          <p className="text-[#BBBBBB] text-sm leading-relaxed">
+          <h3 className="dark:text-gray-100 tetext-black text-md font-bold mb-1">Data and Knowledge</h3>
+          <p className="dark:text-[#BBBBBB] tetext-gray-600 text-sm leading-relaxed">
             Comprehensive data connectors, data retrieval, and knowledge
             management. Connect to your data sources and proprietary information.
           </p>

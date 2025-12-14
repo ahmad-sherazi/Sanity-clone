@@ -43,7 +43,7 @@ export default function NewsroomPage() {
   ];
 
   return (
-    <div className="flex bg-[#151617] text-white min-h-screen">
+    <div className="flex dark:bg-[#151617] bg-white dark:text-white text-black min-h-screen">
       {/* ✅ Sidebar Navbar */}
       <Navbar />
 
@@ -58,7 +58,7 @@ export default function NewsroomPage() {
               America’s Fracking Boom
             </h1>
 
-            <p className="text-gray-300 text-md leading-relaxed mb-6">
+            <p className="dark:text-gray-300 text-gray-600 text-md leading-relaxed mb-6">
               An Nvidia-backed AI startup is planning to build a massive
               data-center complex with CoreWeave that is capable of generating
               its own power on a site that is two-thirds the size of Central
@@ -66,10 +66,10 @@ export default function NewsroomPage() {
             </p>
 
             <div className="flex items-center gap-3 text-sm">
-              <span className="text-gray-400 tracking-widest">2025-10-15</span>
+              <span className="dark:text-gray-400 text-gray-500 tracking-widest">2025-10-15</span>
               <a
                 href="#"
-                className="text-cyan-100 font-semibold uppercase tracking-wide hover:bg-cyan-100 hover:text-black transition flex items-center gap-1"
+                className="dark:text-cyan-100 text-purple-600 font-semibold uppercase tracking-wide dark:hover:bg-cyan-100 hover:bg-purple-500 dark:hover:text-black hover:text-white transition flex items-center gap-1"
               >
                 Read <span className="text-[13px]">↗</span>
               </a>
@@ -92,7 +92,7 @@ export default function NewsroomPage() {
         <section className="w-full">
           <h2 className="text-2xl font-normal">Latest</h2>
           <div className="flex justify-center">
-            <div className="border-b border-gray-100 my-12 w-full md:w-[965px]"></div>
+            <div className="border-b dark:border-gray-100 border-black my-12 w-full md:w-[965px]"></div>
           </div>
 
           {/* ✅ Responsive two-column grid */}
@@ -108,8 +108,8 @@ export default function NewsroomPage() {
                     className="object-cover grayscale rounded-sm"
                   />
                   {/* Play icon (triangle) */}
-                  <div className="absolute top-2 left-2 bg-cyan-100 w-6 h-6 flex items-center justify-center">
-                    <div className="w-0 h-0 border-t-[6px] border-t-transparent border-l-[10px] border-l-black border-b-[6px] border-b-transparent"></div>
+                  <div className="absolute top-2 left-2 dark:bg-cyan-100 bg-purple-500 w-6 h-6 flex items-center justify-center">
+                    <div className="w-0 h-0 border-t-[6px] border-t-transparent border-l-[10px] dark:border-l-black border-l-white border-b-[6px] border-b-transparent"></div>
                   </div>
                 </div>
 
@@ -118,12 +118,12 @@ export default function NewsroomPage() {
 
                 {/* Date + Watch link */}
                 <div className="flex items-center gap-2 text-sm flex-wrap">
-                  <span className="text-gray-400 tracking-widest">
+                  <span className="dark:text-gray-400 text-gray-500 tracking-widest">
                     {news.date},
                   </span>
                   <a
                     href="#"
-                    className="text-cyan-100 font-semibold uppercase tracking-wide hover:text-black hover:bg-cyan-100 transition flex items-center gap-1"
+                    className="dark:text-cyan-100 text-purple-600 font-semibold uppercase tracking-wide dark:hover:bg-cyan-100 hover:bg-purple-500 dark:hover:text-black hover:text-white transition flex items-center gap-1"
                   >
                     {news.type} <span className="text-[13px]">↗</span>
                   </a>
@@ -134,7 +134,7 @@ export default function NewsroomPage() {
         </section>
 
         {/* ✅ Footer */}
-        <div className="flex justify-center items-center min-h-[40vh] lg:ml-0 max-lg:ml-0 mt-12 bg-[#151617] w-full">
+        <div className="flex justify-center items-center min-h-[40vh] lg:ml-0 max-lg:ml-0 mt-12 dark:bg-[#151617] bg-white w-full">
           <h1
             className="text-[100px] sm:text-[100px] md:text-[140px] lg:text-[160px]  font-extrabold text-transparent uppercase tracking-wide"
             style={{
