@@ -298,13 +298,13 @@ export default function PlatformPage() {
       <main className="md:ml-14 w-full overflow-y-auto  md:pt-0">
 
         {/* ✅ Overlapping Circles Section */}
-        <section className="min-h-screen flex items-center justify-center relative ml-0 md:ml-16 px-4 md:px-0 -mt-24 md:-mt-12 overflow-hidden">
+        <section className="min-h-screen flex items-center justify-center relative ml-0 md:ml-16 px-4 md:px-0 -mt-72 md:-mt-12 overflow-hidden">
 
 
-          <div className=" relative flex -space-x-9 md:-space-x-10 overflow-hidden">
+          <div className=" relative flex -space-x-8 md:-space-x-10 overflow-hidden">
 
             {/* Circle 1 */}
-            <div className="w-44 h-44 md:w-80 md:h-80 border-2 border-dashed dark:border-[#444444] border-gray-400 rounded-full flex items-center justify-center dark:bg-[#151617] bg-white">
+            <div className="w-38 h-38 md:w-80 md:h-80 border-2 border-dashed dark:border-[#444444] border-gray-400 rounded-full flex items-center justify-center dark:bg-[#151617] bg-white">
   <h2 className="dark:text-white text-gray-600 text-xl md:text-3xl tracking-wide">
     Your <span className="dark:text-white text-gray-600">code.</span>
   </h2>
@@ -312,7 +312,7 @@ export default function PlatformPage() {
 
 
             {/* Circle 2 */}
-          <div className="w-44 h-44 md:w-80 md:h-80 border-2 border-dashed dark:border-[#444444] border-gray-400 rounded-full flex items-center justify-center dark:bg-[#151617] bg-white">
+          <div className="w-38 h-38 md:w-80 md:h-80 border-2 border-dashed dark:border-[#444444] border-gray-400 rounded-full flex items-center justify-center dark:bg-[#151617] bg-white">
   <h2 className=" dark:text-white text-gray-600 text-xl md:text-3xl tracking-wide">
     Your <span className="dark:text-white text-gray-600">data.</span>
   </h2>
@@ -320,7 +320,7 @@ export default function PlatformPage() {
 
 
             {/* Circle 3 */}
-           <div className="w-44 h-44 md:w-80 md:h-80 border-2 border-dashed dark:border-[#444444] border-gray-400 rounded-full flex items-center justify-center dark:bg-[#151617] bg-white">
+           <div className="w-38 h-38 md:w-80 md:h-80 border-2 border-dashed dark:border-[#444444] border-gray-400 rounded-full flex items-center justify-center dark:bg-[#151617] bg-white">
   <h2 className="dark:text-white text-gray-600 text-xl md:text-3xl tracking-wide">
     Your <span className="dark:text-white text-gray-600">future.</span>
   </h2>
@@ -348,7 +348,7 @@ export default function PlatformPage() {
 
 
 {/* ✅ Futureproofed Section (perfectly aligned + dual underline row + logos under col2) */}
-<section className="px-4 md:px-[10vw] ml-0 md:ml-14 flex flex-col  md:-mt-12 gap-12 max-w-[1500px] -mt-28   mx-auto dark:bg-[#151617] bg-white">
+<section className="px-4 md:px-[10vw] ml-0 md:ml-14 flex flex-col  md:-mt-12 gap-12 max-w-[1500px] -mt-72   mx-auto dark:bg-[#151617] bg-white">
 
   {/* Text + Content Side by Side */}
   <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
