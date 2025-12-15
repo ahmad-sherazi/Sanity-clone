@@ -2303,14 +2303,14 @@ export default function Home() {
 
 
 {/* FOUNDATION MODELS SECTION */}
-<section className="w-full dark:bg-[#151617] bg-white px-0 sm:px-8 py-20 sm:mt-44">
+<section className="w-full dark:bg-[#151617] bg-white px-0 sm:px-8 py-20 sm:mt-44 mt-20">
   <div className="w-full max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-12">
 
     {/* HEADING */}
     <div className="md:col-span-7 order-1">
-      <h2 className="text-3xl sm:text-4xl md:text-5xl font-light leading-tight text-black dark:text-white">
+      <h2 className="text-xl sm:text-xl md:text-2xl font-light leading-tight text-black dark:text-white">
         We build foundation models to transform{" "}
-        <span className="text-gray-500 dark:text-gray-400">
+        <span className="text-gray-500 dark:text-stone-400">
           how work gets done in the enterprise.
         </span>
       </h2>
@@ -2319,11 +2319,11 @@ export default function Home() {
     {/* DIAGRAM */}
     <div
       className="
-        md:col-span-5
-        order-2
+        md:col-span-5 md:ml-12
+        order-2 -mt-4
         border dark:border-[#BBBBBB] border-black
         flex items-center justify-center
-        h-[220px] sm:h-[280px] md:h-[420px]
+        h-[220px] sm:h-[280px] md:h-[600px]
         p-4
       "
     >
@@ -2356,11 +2356,11 @@ export default function Home() {
     {/* TEXT CONTENT */}
     <div
       className="
-        md:col-span-12
+        md:col-span-8
         order-3
         grid grid-cols-1 sm:grid-cols-2
         gap-10
-        mt-12 md:mt-20
+        -mt-2 md:-mt-62
         text-sm leading-relaxed
         text-black dark:text-[#BBBBBB]
       "
@@ -2501,7 +2501,7 @@ export default function Home() {
 
 
         {/* FEATURES GRID SECTION */}
-<section className="w-full dark:bg-[#151617] bg-white px-0 sm:px-8 lg:px-8 mt-20 py-16">
+<section className="w-full dark:bg-[#151617] bg-white px-0 sm:px-8 lg:px-8 mt-8 sm:mt-10 py-16">
   <div className="mx-auto w-full md:max-w-4xl">
     {/* Responsive Grid: 1 col on mobile, 2 cols on md+ */}
     <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-0">
