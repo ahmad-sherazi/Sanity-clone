@@ -2302,6 +2302,204 @@ export default function Home() {
 
 
 
+{/* FOUNDATION MODELS SECTION */}
+<section className="w-full dark:bg-[#151617] bg-white px-0 sm:px-8 py-20 sm:mt-44">
+  <div className="w-full max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-12">
+
+    {/* HEADING */}
+    <div className="md:col-span-7 order-1">
+      <h2 className="text-3xl sm:text-4xl md:text-5xl font-light leading-tight text-black dark:text-white">
+        We build foundation models to transform{" "}
+        <span className="text-gray-500 dark:text-gray-400">
+          how work gets done in the enterprise.
+        </span>
+      </h2>
+    </div>
+
+    {/* DIAGRAM */}
+    <div
+      className="
+        md:col-span-5
+        order-2
+        border dark:border-[#BBBBBB] border-black
+        flex items-center justify-center
+        h-[220px] sm:h-[280px] md:h-[420px]
+        p-4
+      "
+    >
+      <svg
+        viewBox="0 0 300 600"
+        className="w-full h-full max-h-[200px] md:max-h-none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        {/* Architectural boxes (dashed) */}
+        <g stroke="#aaa" strokeWidth="1" fill="none" strokeDasharray="4 4">
+          <rect x="30" y="20" width="100" height="80" />
+          <rect x="140" y="60" width="120" height="90" />
+          <rect x="40" y="180" width="160" height="120" />
+          <rect x="90" y="340" width="140" height="120" />
+        </g>
+
+        {/* Solid outlines */}
+        <g stroke="#999" strokeWidth="1.2" fill="none">
+          <rect x="25" y="15" width="110" height="90" />
+          <rect x="135" y="55" width="130" height="100" />
+          <rect x="35" y="175" width="170" height="130" />
+          <rect x="85" y="335" width="150" height="130" />
+        </g>
+
+        {/* Anchor point */}
+        <rect x="90" y="240" width="12" height="12" stroke="#999" />
+      </svg>
+    </div>
+
+    {/* TEXT CONTENT */}
+    <div
+      className="
+        md:col-span-12
+        order-3
+        grid grid-cols-1 sm:grid-cols-2
+        gap-10
+        mt-12 md:mt-20
+        text-sm leading-relaxed
+        text-black dark:text-[#BBBBBB]
+      "
+    >
+      <div className="space-y-6">
+        <p>
+          We are a frontier lab focused on building the most capable
+          Foundation Models, agents and enterprise systems to deploy them.
+        </p>
+        <p>
+          Our mission is for artificial general intelligence to drive
+          abundance for humanity.
+        </p>
+      </div>
+
+      <div className="space-y-6">
+        <p>
+          This work begins in the highest-consequence environments—
+          enterprises—where Poolside is being battle-tested daily.
+        </p>
+        <p>
+          Helping enterprises become agentic organizations by mobilizing
+          the most important technological development of our lifetimes.
+          Starting with software.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{/* FOUNDATION MODELS SECTION */}
+{/* <section className="w-full dark:bg-[#151617] bg-white px-0 sm:px-8 py-20 sm:mt-44">
+  <div className="w-full max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-12">
+
+    {/* LEFT CONTENT */}
+    {/* <div className="md:col-span-6 flex flex-col order-1">  */}
+
+      {/* Headline */}
+      {/* <h2 className="text-3xl sm:text-4xl md:text-5xl font-light leading-tight text-black dark:text-white">
+        We build foundation models to transform{" "}
+        <span className="text-gray-500 dark:text-gray-400">
+          how work gets done in the enterprise.
+        </span>
+      </h2> */}
+
+      {/* Text (below diagram on mobile) */}
+      {/* <div className="
+        grid grid-cols-1 sm:grid-cols-2 gap-10
+        mt-12 md:mt-20
+        text-sm leading-relaxed
+        text-black dark:text-[#BBBBBB]
+        order-3 md:order-2
+      ">
+
+        <div className="space-y-6">
+          <p>
+            We are a frontier lab focused on building the most capable
+            Foundation Models, agents and enterprise systems to deploy them.
+          </p>
+          <p>
+            Our mission is for artificial general intelligence to drive
+            abundance for humanity.
+          </p>
+        </div>
+
+        <div className="space-y-6">
+          <p>
+            This work begins in the highest-consequence environments—
+            enterprises—where Poolside is being battle-tested daily.
+          </p>
+          <p>
+            Helping enterprises become agentic organizations by mobilizing
+            the most important technological development of our lifetimes.
+            Starting with software.
+          </p>
+        </div>
+
+      </div>
+    </div> */}
+
+    {/* RIGHT DIAGRAM */}
+    {/* <div className="
+      md:col-span-6
+      order-2 md:order-2
+      border dark:border-[#BBBBBB] border-black
+      flex items-center justify-center
+      h-[220px] sm:h-[280px] md:h-auto
+      p-4
+    ">
+      <svg
+        viewBox="0 0 300 600"
+        className="w-full h-full max-h-[200px] md:max-h-none"
+        xmlns="http://www.w3.org/2000/svg"
+      > */}
+        {/* Architectural boxes (dashed) */}
+        {/* <g stroke="#aaa" strokeWidth="1" fill="none" strokeDasharray="4 4">
+          <rect x="30" y="20" width="100" height="80" />
+          <rect x="140" y="60" width="120" height="90" />
+          <rect x="40" y="180" width="160" height="120" />
+          <rect x="90" y="340" width="140" height="120" />
+        </g> */}
+
+        {/* Solid outlines */}
+        {/* <g stroke="#999" strokeWidth="1.2" fill="none">
+          <rect x="25" y="15" width="110" height="90" />
+          <rect x="135" y="55" width="130" height="100" />
+          <rect x="35" y="175" width="170" height="130" />
+          <rect x="85" y="335" width="150" height="130" />
+        </g> */}
+
+        {/* Anchor point (no blue line) */}
+        {/* <rect x="90" y="240" width="12" height="12" stroke="#999" />
+      </svg>
+    </div>
+
+  </div>
+</section> */}
+
+
+
+
+
+
         {/* FEATURES GRID SECTION */}
 <section className="w-full dark:bg-[#151617] bg-white px-0 sm:px-8 lg:px-8 mt-20 py-16">
   <div className="mx-auto w-full md:max-w-4xl">
