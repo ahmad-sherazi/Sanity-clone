@@ -216,12 +216,16 @@ export default function BlogPage() {
       <Navbar />
 
       {/* ✅ Main Content */}
-      <main className="ml-0 md:ml-44 flex-1 px-0  md:px-10 py-0 md:py-10 md:mt-0 mt-10  ">
+      <main className="-ml-4 -mr-4 md:ml-44 flex-1 -px-32 md:px-10 py-0 md:py-10 md:mt-0 mt-10  ">
 
         
+         
 
+
+         
         {/* ✅ SVG Card Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3  justify-items-center ">
+        <div className="hidden md:grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 justify-items-center">
+
           {cards.map((card, index) => (
             <div key={index} className="relative w-full sm:w-[350px] h-[450px] group ">
               {/* SVG Outline */}
@@ -258,8 +262,8 @@ export default function BlogPage() {
       dark:group-hover:stroke-black
       group-hover:stroke-white
     "
-  />
-
+  /> 
+ 
   <path
     d="M125 50H275V190C275 200 268 210 255 210H145C132 210 125 200 125 190V50Z"
     strokeWidth="1"
@@ -276,7 +280,7 @@ export default function BlogPage() {
 
 
               {/* ✅ Centered Text */}
-              <div className={`absolute text-left leading-relaxed ${card.style}`}>
+               <div className={`absolute text-left leading-relaxed ${card.style}`}>
 
 
   <p className="text-2xl leading-relaxed dark:text-white text-black dark:group-hover:text-black group-hover:text-white transition">
@@ -292,6 +296,44 @@ export default function BlogPage() {
             
           ))}
         </div>
+
+        {/* ✅ 3 Feature Boxes Section */}
+<section className="w-full mt-10 mb-20 md:mt-16  px-22 sm:px-6 md:px-10 block md:hidden">
+  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+    
+    {/* Box 1 */}
+    <div className="relative h-[300px] sm:h-[380px] dark:text-white dark:hover:text-black hover:text-white  text-black  dark:hover:bg-cyan-100 hover:bg-purple-500 border dark:border-white border-black flex items-end justify-center p-6">
+      <p className="text-center text-2xl sm:text-lg ">
+          
+        Announcing Project <br />
+        Horizon: Why we're <br />
+        building a 2 gigawatt <br />
+        AI campus in Texas
+      
+      </p>
+    </div>
+
+    {/* Box 2 */}
+     <div className="relative h-[300px] sm:h-[380px] dark:text-white dark:hover:text-black hover:text-white  text-black  dark:hover:bg-cyan-100 hover:bg-purple-500 border dark:border-white border-black flex items-end justify-center p-6">
+      <p className="text-center text-2xl sm:text-lg ">
+     
+       The hidden engineering <br />
+        behind foundation <br />
+        model building
+      </p>
+    </div>
+
+    {/* Box 3 */}
+    <div className="relative h-[300px] sm:h-[380px] dark:text-white dark:hover:text-black hover:text-white  text-black  dark:hover:bg-cyan-100 hover:bg-purple-500 border dark:border-white border-black flex items-end justify-center p-6">
+      <p className="text-center text-2xl sm:text-lg ">
+      
+       Our vision: Research
+      </p>
+    </div>
+
+  </div>
+</section>
+
 
 
 
