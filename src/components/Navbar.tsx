@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
 import { useThemeToggle } from "@/app/theme-provider";
@@ -8,6 +8,18 @@ import { useThemeToggle } from "@/app/theme-provider";
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
     const toggleTheme = useThemeToggle();
+     useEffect(() => {
+    const media = window.matchMedia("(min-width: 1024px)"); // lg breakpoint
+
+    const handleChange = () => {
+      if (media.matches) {
+        setMenuOpen(false);
+      }
+    };
+
+    media.addEventListener("change", handleChange);
+    return () => media.removeEventListener("change", handleChange);
+  }, []);
 
   const links = [
     { name: "PLATFORM", href: "/platform" },
@@ -21,7 +33,10 @@ export default function Navbar() {
   return (
     <>
       {/* ✅ Desktop Sidebar */}
-      <aside className="hidden md:flex w-32 h-screen fixed left-0 top-0 flex-col items-start justify-start mt-12 gap-3 pl-8 ml-8 dark:text-white text-black text-sm font-mono tracking-wider bg-white dark:bg-[#151617]">
+      {/* <aside className="hidden md:flex w-32 h-screen fixed left-0 top-0 flex-col items-start justify-start mt-12 gap-3 pl-8 ml-8 dark:text-white text-black text-sm font-mono tracking-wider bg-white dark:bg-[#151617]"> */}
+      {/* Desktop Sidebar (lg and up) */}
+<aside className="hidden lg:flex w-32 h-screen fixed left-0 top-0 flex-col items-start justify-start mt-12 gap-3 pl-8 ml-8 dark:text-white text-black text-sm font-mono tracking-wider bg-white dark:bg-[#151617]">
+
         {/* Logo */}
         <div className="flex items-center gap-2  dark:hover:bg-cyan-100 hover:bg-purple-500 ">
          <Link href="/"><span className="dark:text-cyan-100 text-purple-600 dark:hover:text-black hover:text-white  font-semibold">SANITY</span></Link>
@@ -51,7 +66,10 @@ export default function Navbar() {
       </aside>
 
       {/* ✅ Mobile Top Navbar */}
-      <div className="md:hidden fixed top-0 left-0 w-full bg-white dark:bg-[#151617] flex justify-between items-center px-6 py-4 z-50 dark:text-white text-black font-mono tracking-wider border-b dark:border-gray-900 border-gray-200">
+      {/* <div className="md:hidden fixed top-0 left-0 w-full bg-white dark:bg-[#151617] flex justify-between items-center px-6 py-4 z-50 dark:text-white text-black font-mono tracking-wider border-b dark:border-gray-900 border-gray-200"> */}
+      {/* Mobile + md Top Navbar */}
+<div className="lg:hidden fixed top-0 left-0 w-full bg-white dark:bg-[#151617] flex justify-between items-center px-6 py-4 z-50 dark:text-white text-black font-mono tracking-wider border-b dark:border-gray-900 border-gray-200">
+
         <Link href="/"><span className="dark:text-cyan-100 text-purple-600 font-semibold">SANITY</span></Link>
 
         <button

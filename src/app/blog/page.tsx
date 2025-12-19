@@ -216,7 +216,18 @@ export default function BlogPage() {
       <Navbar />
 
       {/* ✅ Main Content */}
-      <main className="-ml-4 -mr-4 md:ml-44 flex-1 -px-32 md:px-10 py-0 md:py-10 md:mt-0 mt-10  ">
+      {/* <main className="-ml-4 -mr-4 md:ml-44 flex-1 -px-32 md:px-10 py-0 md:py-10 md:mt-0 mt-10  "> */}
+      <main
+  className="
+    flex-1
+    w-full
+    px-4 sm:px-6
+    lg:ml-44 lg:px-10
+    py-6 sm:py-10
+    mt-14 lg:mt-0
+  "
+>
+
 
         
          
@@ -298,8 +309,12 @@ export default function BlogPage() {
         </div>
 
         {/* ✅ 3 Feature Boxes Section */}
-<section className="w-full mt-10 mb-20 md:mt-16  px-22 sm:px-6 md:px-10 block md:hidden">
-  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+{/* <section className="w-full mt-10 mb-20 md:mt-16  px-22 sm:px-6 md:px-10 block md:hidden">
+  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto"> */}
+  <section className="w-full mt-10 mb-20 block md:hidden">
+  <div className="max-w-md mx-auto px-4 sm:px-6">
+    <div className="grid grid-cols-1 gap-6">
+
     
     {/* Box 1 */}
     <div className="relative h-[300px] sm:h-[380px] dark:text-white dark:hover:text-black hover:text-white  text-black  dark:hover:bg-cyan-100 hover:bg-purple-500 border dark:border-white border-black flex items-end justify-center p-6">
@@ -330,7 +345,7 @@ export default function BlogPage() {
        Our vision: Research
       </p>
     </div>
-
+</div>
   </div>
 </section>
 
