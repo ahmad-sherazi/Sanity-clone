@@ -1,5 +1,5 @@
 'use client';
-
+import { Sun, Moon, Laptop } from "lucide-react";
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
@@ -7,7 +7,8 @@ import { useThemeToggle } from "@/app/theme-provider";
  
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
-    const toggleTheme = useThemeToggle();
+    const theme = useThemeToggle();
+
      useEffect(() => {
     const media = window.matchMedia("(min-width: 1024px)"); // lg breakpoint
 
@@ -56,12 +57,35 @@ export default function Navbar() {
         ))}
 
 
-        <button
+        {/* <button
   onClick={toggleTheme}
   className="mt-4 dark:text-cyan-100 text-purple-600 dark:hover:bg-cyan-100 hover:bg-purple-500 dark:hover:text-black hover:text-white border dark:border-cyan-100 border-purple-600 px-1 py-1 rounded text-xs transition"
 >
   Toggle Theme
-</button>
+</button> */}
+<div className="mt-4 flex gap-2">
+  <button
+    onClick={theme.dark}
+    className="w-8 h-8 flex items-center justify-center border dark:border-gray-200 border-black hover:bg-purple-500 dark:hover:bg-cyan-100 hover:text-white dark:hover:text-black transition"
+  >
+    <Sun size={16} />
+  </button>
+
+  <button
+    onClick={theme.light}
+    className="w-8 h-8 flex items-center justify-center border dark:border-gray-200 border-black hover:bg-purple-500 dark:hover:bg-cyan-100 hover:text-white dark:hover:text-black transition"
+  >
+    <Moon size={16} />
+  </button>
+
+  <button
+    onClick={theme.system}
+    className="w-8 h-8 flex items-center justify-center border dark:border-gray-200 border-black hover:bg-purple-500 dark:hover:bg-cyan-100 hover:text-white dark:hover:text-black transition"
+  >
+    <Laptop size={16} />
+  </button>
+</div>
+
 
       </aside>
 
@@ -95,13 +119,28 @@ export default function Navbar() {
               </Link>
             ))}
 
+<div className="mt-4 flex gap-2">
+  <button
+    onClick={theme.dark}
+    className="w-8 h-8 flex items-center justify-center border dark:border-gray-200 border-black hover:bg-purple-500 dark:hover:bg-cyan-100 hover:text-white dark:hover:text-black transition"
+  >
+    <Sun size={16} />
+  </button>
 
-        <button
-  onClick={toggleTheme}
-  className="mt-4 dark:text-cyan-100 text-purple-600 dark:hover:bg-cyan-100 hover:bg-purple-500 dark:hover:text-black hover:text-white border dark:border-cyan-100 border-purple-600 px-1 py-1 rounded text-xs transition"
->
-  Toggle Theme
-</button>
+  <button
+    onClick={theme.light}
+    className="w-8 h-8 flex items-center justify-center border dark:border-gray-200 border-black hover:bg-purple-500 dark:hover:bg-cyan-100 hover:text-white dark:hover:text-black transition"
+  >
+    <Moon size={16} />
+  </button>
+
+  <button
+    onClick={theme.system}
+    className="w-8 h-8 flex items-center justify-center border dark:border-gray-200 border-black hover:bg-purple-500 dark:hover:bg-cyan-100 hover:text-white dark:hover:text-black transition"
+  >
+    <Laptop size={16} />
+  </button>
+</div>
 
 
           </div>
