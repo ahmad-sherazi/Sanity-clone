@@ -388,7 +388,7 @@ export default function ThreeColSection() {
   );
 
   return (
-    <section className="dark:bg-[#151617] bg-white dark:text-white text-black w-full px-4 md:px-10 py-16 overflow-x-hidden overflow-y-visible ml-0 md:ml-16">
+    <section className="dark:bg-[#151617] bg-white dark:text-white text-black w-full px-4 md:px-10 py-16 overflow-x-hidden overflow-y-visible ml-0 md:ml-0 lg:ml-16">
       <div className="max-w-4xl mx-auto">
         {/* 🟦 Top Motion Line */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
@@ -551,3 +551,4 @@ export default function ThreeColSection() {
     </section>
   );
 }
+  

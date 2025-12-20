@@ -2203,7 +2203,9 @@ export default function Home() {
     <>
       <div className={`${inter.className} min-h-screen  dark:bg-[#151617] bg-white dark:text-white text-black  flex`}>
         {/* ---------- DESKTOP SIDEBAR ---------- */}
-        <aside className="hidden md:flex w-32 h-screen fixed left-0 top-0 flex-col items-start justify-start mt-12 gap-3 pl-8 ml-8 text-white text-sm font-mono tracking-wider bg-white dark:bg-[#151617]">
+        {/* <aside className="hidden md:flex w-32 h-screen fixed left-0 top-0 flex-col items-start justify-start mt-12 gap-3 pl-8 ml-8 text-white text-sm font-mono tracking-wider bg-white dark:bg-[#151617]"> */}
+        <aside className="hidden lg:flex w-32 h-screen fixed left-0 top-0 flex-col items-start justify-start mt-12 gap-3 pl-8 ml-8 dark:text-white text-black text-sm font-mono tracking-wider bg-white dark:bg-[#151617]">
+
           <div className="flex items-center gap-2 dark:hover:bg-cyan-100 hover:bg-purple-500 ">
             <Link href="/">
               <span className="dark:text-cyan-100 dark:hover:text-black text-purple-600 hover:text-white font-semibold">SANITY</span>
@@ -2228,7 +2230,9 @@ export default function Home() {
 
         </aside>
   {/* ✅ Mobile Top Navbar */}
-      <div className="md:hidden fixed top-0 left-0 w-full bg-white dark:bg-[#151617] flex justify-between items-center px-6 py-4 z-50 dark:text-white text-black font-mono tracking-wider border-b dark:border-gray-900 border-gray-200">
+      {/* <div className="md:hidden fixed top-0 left-0 w-full bg-white dark:bg-[#151617] flex justify-between items-center px-6 py-4 z-50 dark:text-white text-black font-mono tracking-wider border-b dark:border-gray-900 border-gray-200"> */}
+      <div className="lg:hidden fixed top-0 left-0 w-full bg-white dark:bg-[#151617] flex justify-between items-center px-6 py-4 z-50 dark:text-white text-black font-mono tracking-wider border-b dark:border-gray-900 border-gray-200">
+
         <Link href="/"><span className="dark:text-cyan-100 text-purple-600 font-semibold">SANITY</span></Link>
 
         <button
@@ -2268,7 +2272,7 @@ export default function Home() {
       </div>
 
         {/* ---------- MAIN CONTENT ---------- */}
-        <main className="flex-1 md:ml-28 flex flex-col items-center mt-16 md:mt-0 px-4 sm:px-6">
+        <main className="flex-1 md:ml-0 lg:ml-28 flex flex-col items-center mt-16 lg:mt-0 md:mt-10 px-4 sm:px-6">
           {/* HERO SECTION */}
           <section className="dark:bg-[#151617] bg-purple-600 relative w-full max-w-4xl h-[350px]  md:h-[420px] dark:border dark:border-gray-300 border border-purple-600 flex flex-col justify-between px-6 md:px-16 py-10 md:py-16 mt-6 md:mt-12 text-left md:text-left">
             <div>
@@ -2303,7 +2307,7 @@ export default function Home() {
 
 
 {/* FOUNDATION MODELS SECTION */}
-<section className="w-full dark:bg-[#151617] bg-white px-0 sm:px-8 py-20 sm:mt-44 mt-20">
+<section className="w-full dark:bg-[#151617] bg-white px-0 sm:px-2 py-20 sm:mt-44 mt-20">
   <div className="w-full max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-12">
 
     {/* HEADING */}
@@ -2501,7 +2505,7 @@ export default function Home() {
 
 
         {/* FEATURES GRID SECTION */}
-<section className="w-full dark:bg-[#151617] bg-white px-0 sm:px-8 lg:px-8 mt-8 sm:mt-10 py-16">
+<section className="w-full dark:bg-[#151617] bg-white px-0 sm:px-2 lg:px-8 mt-8 sm:mt-10 py-16">
   <div className="mx-auto w-full md:max-w-4xl">
     {/* Responsive Grid: 1 col on mobile, 2 cols on md+ */}
     <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-0">
@@ -2672,7 +2676,7 @@ export default function Home() {
 
 
 {/* OUTCOMES SECTION */}
-<section className="dark:bg-[#151617] bg-white dark:text-white text-black py-16 px-0 md:px-8">
+<section className="dark:bg-[#151617] bg-white dark:text-white text-black py-16 px-0 md:px-2">
   <div className="max-w-4xl mx-auto">
     {/* Top Text */}
     <div className="grid md:grid-cols-2 gap-10 mb-12 text-left md:text-left">
@@ -2736,7 +2740,7 @@ export default function Home() {
 
 
 
-<section className="w-full dark:bg-[#151617] bg-white px-0 sm:px-8 lg:px-8 py-24">
+<section className="w-full dark:bg-[#151617] bg-white px-0 sm:px-2 lg:px-8 py-24">
   <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 items-center gap-12">
 
     {/* LEFT ILLUSTRATION with WHITE BORDER */}
@@ -2815,7 +2819,7 @@ export default function Home() {
       <div className="border-t dark:border-cyan-100 border-purple-600 pt-4">
         <a
           href="#"
-          className="dark:text-cyan-100 text-purple-600 font-mono text-md flex items-center gap-2 dark:hover:text-black hover:text-white dark:hover:bg-cyan-100 hover:bg-purple-500 transition-colors md:ml-60 justify-center ml-26 md:justify-start"
+          className="dark:text-cyan-100 text-purple-600 font-mono text-md flex items-center gap-2 dark:hover:text-black hover:text-white dark:hover:bg-cyan-100 hover:bg-purple-500 transition-colors md:ml-38 lg:ml-60 justify-center ml-34 md:justify-start"
         >
           → OUR PATH TO AGI
         </a>
@@ -2829,7 +2833,7 @@ export default function Home() {
 
 
           {/* CTA ROWS */}
-          <section className="dark:bg-[#151617] bg-white dark:text-white text-black py-16 md:py-24 px-0 sm:px-6">
+          <section className="dark:bg-[#151617] bg-white dark:text-white text-black py-16 md:py-24 px-0 sm:px-2">
             <div className="max-w-5xl mx-auto flex flex-col gap-12 md:gap-24">
               <div className="flex flex-col md:flex-row  md:justify-between gap-6 border-b dark:border-cyan-100 border-purple-600 pb-6 text-left md:text-left">
                 <h2 className="text-2xl sm:text-3xl font-light leading-tight">
@@ -2837,7 +2841,7 @@ export default function Home() {
                 </h2>
                 <a
                   href="#"
-                  className="dark:text-cyan-100 text-purple-600 font-semibold uppercase tracking-wide text-sm flex items-center   justify-center gap-2 dark:hover:text-black hover:text-white dark:hover:bg-cyan-100 hover:bg-purple-500 transition"
+                  className="dark:text-cyan-100 text-purple-600 font-semibold ml-36 md:ml-0 lg:ml-0 uppercase tracking-wide text-sm flex items-center   justify-center gap-2 dark:hover:text-black hover:text-white dark:hover:bg-cyan-100 hover:bg-purple-500 transition"
                 >
                   → Talk to us today
                 </a>
@@ -2849,7 +2853,7 @@ export default function Home() {
                 </h2>
                 <a
                   href="#"
-                  className="dark:text-cyan-100 text-purple-600 font-semibold uppercase tracking-wide text-sm flex items-center   justify-center gap-2 dark:hover:text-black hover:text-white dark:hover:bg-cyan-100 hover:bg-purple-500 transition"
+                  className="dark:text-cyan-100 text-purple-600 font-semibold ml-46 md:ml-30 lg:ml-0 uppercase tracking-wide text-sm flex items-center   justify-center gap-2 dark:hover:text-black hover:text-white dark:hover:bg-cyan-100 hover:bg-purple-500 transition"
                 >
                   → View roles
                 </a>
@@ -2866,7 +2870,7 @@ export default function Home() {
       {/* ✅ Footer */}
       <div className="flex justify-center items-center min-h-[30vh] md:min-h-[40vh] dark:bg-[#151617] bg-white text-center">
         <h1
-          className="text-[100px] sm:text-[100px] md:text-[160px] font-extrabold md:ml-20 ml-0 text-transparent uppercase tracking-wide"
+          className="text-[100px] sm:text-[100px] md:text-[160px] font-extrabold md:ml-0 lg:ml-20 ml-0 text-transparent uppercase tracking-wide"
           style={{
             backgroundImage:
               "repeating-linear-gradient(0deg, #ccc 0, #ccc 2px, transparent 2px, transparent 8px)",

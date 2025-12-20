@@ -222,7 +222,7 @@ export default function BlogPage() {
     flex-1
     w-full
     px-4 sm:px-6
-    lg:ml-44 lg:px-10
+    lg:ml-44 md:mr-0 lg:px-10
     py-6 sm:py-10
     mt-14 lg:mt-0
   "
@@ -367,7 +367,7 @@ export default function BlogPage() {
     <footer className="w-full flex justify-center items-center min-h-[40vh] mb-0 mt-0 md:mt-8 md:-mb-10 dark:bg-[#151617] bg-white ">
 
         <h1
-          className="text-[100px] md:text-[160px] font-extrabold text-transparent mr-0 md:mr-28 uppercase tracking-wide"
+          className="text-[100px] md:text-[160px] font-extrabold text-transparent mr-0 md:mr-0 lg:mr-28 uppercase tracking-wide"
           style={{
             backgroundImage:
               "repeating-linear-gradient(0deg, #ccc 0, #ccc 2px, transparent 2px, transparent 8px)",

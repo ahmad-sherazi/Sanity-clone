@@ -48,7 +48,7 @@ export default function NewsroomPage() {
       <Navbar />
 
       {/* ✅ Main Content */}
-      <main className="lg:ml-44 max-lg:ml-0 flex-1 px-4 sm:px-8 md:px-16 py-8 w-full md:mt-0 mt-12">
+      <main className="lg:ml-44 max-lg:ml-0 flex-1 px-4 sm:px-8 lg:px-16 md:px-8 py-8 w-full lg:mt-0 md:mt-16  mt-12">
         {/* ✅ Featured News Section */}
         <section className="flex flex-col lg:flex-row items-center gap-12 mb-20 w-full">
           {/* Left Column */}

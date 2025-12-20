@@ -498,13 +498,13 @@ export default function VisionPage() {
       <div className="flex flex-col md:flex-row">
         <Navbar />
 
-        <section className="flex-1 overflow-y-auto w-full px-2 sm:px-4 md:ml-48 max-w-6xl mx-auto flex flex-col items-center justify-start dark:bg-[#151617] bg-white mt-8 md:mt-0   pt-0 pb-8">
+        <section className="flex-1 overflow-y-auto w-full px-2 sm:px-4 md:ml-0 lg:ml-48 max-w-6xl mx-auto flex flex-col items-center justify-start dark:bg-[#151617] bg-white mt-8 md:mt-0   pt-0 pb-8">
           {/* ⭐ REPLACED -ml-40 mr-96 WITH MOBILE-SAFE ml-0 mr-0 */}
           <div
             className="
               flex flex-wrap justify-center items-center gap-4 md:gap-5 mt-4
               ml-0 mr-0
-              md:ml-48
+              md:ml-0
               lg:ml-0 lg:mr-0
             "
           >
@@ -543,7 +543,7 @@ export default function VisionPage() {
           <footer className="w-full flex justify-center items-center min-h-[40vh] dark:bg-[#151617] bg-white mt-8 md:-mb-8">
             {/* ⭐ MOBILE FONT SIZE FIX */}
             <h1
-              className="text-[100px] sm:text-[100px] md:text-[140px] lg:text-[160px] lg:mr-28 font-extrabold text-transparent uppercase tracking-wide text-center"
+              className="text-[100px] sm:text-[100px] md:text-[140px] lg:text-[160px] lg:mr-28 md:mr-0 font-extrabold text-transparent uppercase tracking-wide text-center"
               style={{
                 backgroundImage:
                   "repeating-linear-gradient(0deg, #ccc 0, #ccc 2px, transparent 2px, transparent 8px)",
@@ -589,7 +589,7 @@ function TiltLetter({
     <div
       onMouseMove={handleMouseMove}
       onMouseLeave={resetRotate}
-      className={`relative border dark:border-white border-black w-[56px] sm:w-[120px] md:w-[160px] lg:w-[175px] ${height} ${offsetTop} ${offsetBottom} flex items-center justify-center perspective-[800px]`}
+      className={`relative border dark:border-white border-black w-[56px] sm:w-[120px] md:w-[130px] lg:w-[175px] ${height} ${offsetTop} ${offsetBottom} flex items-center justify-center perspective-[800px]`}
     ><motion.span
   className="
     font-extrabold select-none

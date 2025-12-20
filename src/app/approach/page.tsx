@@ -13,7 +13,7 @@ export default function ApproachPage() {
       <Navbar />
 
       {/* ✅ Approach Section */}
-     <section className="dark:bg-[#151617] bg-white dark:text-white text-black py-0 md:mt-0 md:-pt-32 pt-20 md:py-16 px-4 md:px-8 ml-0 md:ml-26">
+     <section className="dark:bg-[#151617] bg-white dark:text-white text-black py-0 md:mt-0 md:-pt-32 pt-20 md:py-16 px-4 md:px-8 ml-0 md:ml-0 lg:ml-26">
 
         {/* Top Text */}
         {/* <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-12 mb-12">
@@ -141,7 +141,7 @@ export default function ApproachPage() {
 
 
 {/* ✅ Animated Underline Row (visible & positioned) */}
-<div className="flex justify-between gap-10 mt-6 md:mt-12 ml-0 md:ml-28 px-4 md:px-[10vw] max-w-[1500px] mx-auto relative z-20">
+<div className="flex justify-between gap-10 mt-6 md:mt-12 ml-0 md:ml-0 lg:ml-28 px-4 lg:px-[10vw] md:px-[4vw]  max-w-[1500px] mx-auto relative z-20">
   {/* Left underline */}
   <motion.div
     className="relative w-full h-[2px] dark:bg-[#1a1b1c] bg-white overflow-hidden"
@@ -161,7 +161,7 @@ export default function ApproachPage() {
 
   {/* Right underline */}
   <motion.div
-    className="relative w-full h-[1px] dark:bg-[#1a1b1c] bg-white overflow-hidden"
+    className="relative w-full h-[2px] dark:bg-[#1a1b1c] bg-white overflow-hidden"
     initial={{ opacity: 0 }}
     whileInView={{ opacity: 1 }}
     viewport={{ once: true }}
@@ -186,7 +186,7 @@ export default function ApproachPage() {
 
 
 {/* ✅ Speak to Us + Form + FAQs Section (aligned with circle section width) */}
-<section className="px-4 md:px-[10vw] ml-0 md:ml-28 py-0 md:py-20 md:mt-0 mt-20 dark:text-white text-black dark:bg-[#151617] bg-white grid md:grid-cols-2 gap-20 max-w-[1500px] mx-auto">
+<section className="px-4 lg:px-[10vw] md:px-[4vw] ml-0 md:ml-0 lg:ml-28 py-0 md:py-20 md:mt-0 mt-20 dark:text-white text-black dark:bg-[#151617] bg-white grid md:grid-cols-2 gap-20 max-w-[1500px] mx-auto">
   {/* LEFT SIDE — Text */}
   <div className="flex flex-col justify-start gap-6">
     <div>
@@ -258,7 +258,7 @@ export default function ApproachPage() {
 
 
   {/* ✅ Footer */}
-        <div className="flex justify-center items-center min-h-[40vh] ml-0 md:ml-12 dark:bg-[#151617] bg-white">
+        <div className="flex justify-center items-center min-h-[40vh] ml-0 lg:ml-12 md:ml-0 dark:bg-[#151617] bg-white">
           <h1
             className="text-[100px] md:text-[160px] font-extrabold text-transparent uppercase tracking-wide"
             style={{
